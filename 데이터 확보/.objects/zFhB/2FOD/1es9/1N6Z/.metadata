@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Click 'document 2024ver.'",
+  "Type": "Element",
+  "Id": "1N6ZaOP_vEqlrXnytPQbtg",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/1N6ZaOP_vEqlrXnytPQbtg",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/1es9yo1z20GyzV5JPYku5Q",
+  "Created": "2024-06-16T12:09:38.3355262Z",
+  "Updated": "2024-06-16T12:09:38.3355262Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

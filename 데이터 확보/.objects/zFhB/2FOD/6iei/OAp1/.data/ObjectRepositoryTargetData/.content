@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="UYbp5pKgPE-CsbJnlEtBXw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;html app='chrome.exe' title='2024ver. 남친룩 월드컵 - YouTube' /&gt;&lt;webctrl parentid='info' tag='SPAN' /&gt;" Guid="5897b237-0a52-4976-87e7-6562ac48034f" SearchSteps="Selector">
+      <imageRef attrName="InformativeScreenshot" originalValue="3ad620e8a79f78fc6a12fc874e8c89f8.png" xmlns="">00hEPuiEtukSAkwb2NhXUlg</imageRef>
+    </TargetAnchorable>
+    <p:InArgument x:TypeArguments="ui:WaitForReady" x:Key="ClassicWaitForReady" />
+    <x:Boolean x:Key="IsClassic">True</x:Boolean>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

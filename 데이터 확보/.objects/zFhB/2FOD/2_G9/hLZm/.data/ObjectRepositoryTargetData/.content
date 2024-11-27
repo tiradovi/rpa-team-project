@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XjMzJ2v1Y0GRaDlb0KIMbw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.youtube.com/watch?v=xQYrJ-uoUis&amp;t=102s" CVScreenId="6b40d1ac-5fea-4673-b13d-32d2449d682e" CvTextArea="129, 530, 64, 33" CvType="AnyWordGroup" DesignTimeRectangle="131, 529, 34, 37" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='46' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' /&gt;" Guid="1abcca54-eeef-4eae-8be4-b8d2ab920ed1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="6b40d1ac-5fea-4673-b13d-32d2449d682e" CvTextArea="63, 528, 58, 34" CvTextArgument="5l3" CvType="Text" DesignTimeRectangle="64, 529, 67, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' check:innerText='댓글' /&gt;" Guid="a6cb2a62-b2ce-4264-b1af-18391dfc184f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6ae01b1809b19e730fbf82de0c15e08a.png" xmlns="">0kUrYqRQ8P0OU-hTHCOJJwA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click '최신순'",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "qqe1mT2TFk2MTLXBJWykOg",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/qqe1mT2TFk2MTLXBJWykOg",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/hGIrXyzpwEO_4GKU9LsB7Q",
+  "Created": "2024-06-16T11:49:52.7545285Z",
+  "Updated": "2024-06-16T11:49:52.7545285Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

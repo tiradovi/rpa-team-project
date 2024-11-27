@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Get Text '구독자수'(1)",
+  "Type": "Element",
+  "Id": "qPt_iayYOUaXONV4YJE6hg",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/qPt_iayYOUaXONV4YJE6hg",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/2_G9CfCOSUueIntbAuWWbg",
+  "Created": "2024-06-17T01:05:27.6575425Z",
+  "Updated": "2024-06-17T01:05:27.6575425Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

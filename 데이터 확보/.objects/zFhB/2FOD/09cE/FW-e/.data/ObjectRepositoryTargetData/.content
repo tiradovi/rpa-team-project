@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5rlBa1AyR0Gs4NxEn5Z-RA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.youtube.com/watch?v=ESD3Tyou200&amp;t=500s" DesignTimeRectangle="114, 886, 35, 37" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='66' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' /&gt;" Guid="deac65c0-8908-4952-bcc0-150805dae79d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='2024ver. 남친룩 월드컵 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="47, 886, 67, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' check:innerText='댓글' /&gt;" Guid="9487ef1e-6359-4143-9150-3da67ce84262" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d658e212abc851219b4c8c7bcd9b9100.png" xmlns="">0YJfOdycRyUCFv1KUvrvj7g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "카페 가입자수",
+  "Type": "Element",
+  "Id": "s83Dz7sGKECw_TJsZlnD0A",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/s83Dz7sGKECw_TJsZlnD0A",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/hAwVWtyDgUKlBZ5jr9qRVg",
+  "Created": "2024-06-16T06:04:06.2443031Z",
+  "Updated": "2024-06-16T06:04:06.2443031Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

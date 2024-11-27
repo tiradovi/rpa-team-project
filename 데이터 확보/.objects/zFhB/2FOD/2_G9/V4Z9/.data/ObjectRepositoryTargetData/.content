@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Meat0b28M0GobJWVDMJJgw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.youtube.com/watch?v=xQYrJ-uoUis&amp;t=102s" CVScreenId="c697d46b-da5e-40f2-ad24-2c00f0a1ef10" CvTextArea="1145, 1439, 39, 21" CvType="AnyWordGroup" DesignTimeRectangle="1148, 1424, 37, 54" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl name='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 437명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 437명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="b73c9f0d-d1c8-4ab7-bb60-823aaa1e0b7d" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c697d46b-da5e-40f2-ad24-2c00f0a1ef10" CvElementArea="1296, 1420, 128, 59" CvType="Button" DesignTimeRectangle="1358, 1424, 43, 54" FullSelectorArgument="&lt;ctrl name='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' check:text='공유' /&gt;" Guid="5a894c04-7ce5-44dc-b0cb-15210774aff7" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0e9069cfcade124bc6560749e6c49daa.png" xmlns="">00eN4C58Hmkeilm4LbJS0LQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

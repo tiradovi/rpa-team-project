@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="m40PZ9fs30O6MRd4YVOw3g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube - Chrome' /&gt;&lt;ctrl name='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' role='document' /&gt;" Guid="e4118071-43cf-486d-8151-88c7a833486f" SearchSteps="Selector">
+      <imageRef attrName="InformativeScreenshot" originalValue="cef55c92ccf30b8eb8f6ec5f21a6ba06.png" xmlns="">0z9156dyUMkyoz1s0R0Ittw</imageRef>
+    </TargetAnchorable>
+    <p:InArgument x:TypeArguments="ui:WaitForReady" x:Key="ClassicWaitForReady" />
+    <ui:Region x:Key="ClassicClippingRegion" Rectangle="1691, 403, 11, 134" />
+    <x:Boolean x:Key="IsClassic">True</x:Boolean>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

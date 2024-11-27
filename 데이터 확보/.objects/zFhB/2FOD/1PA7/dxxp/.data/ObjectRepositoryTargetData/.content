@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="WdzzG6-70Uit9757W1sK2Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cafe.naver.com/fitthesize#" DesignTimeRectangle="685, 1165, 69, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='220,319' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='gm-tcol-c total' /&gt;" Guid="13311b8e-0f72-44c9-be00-8e0bfc11477e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="507, 1170, 97, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' type='' check:innerText='전체글보기' /&gt;" Guid="e5034b26-8626-4d51-8fce-8378b4a78ba0" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="30ba69cb4a06e81d29baa522cf03d07a.png" xmlns="">0icySelCxI0y24YFkhJmRMQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

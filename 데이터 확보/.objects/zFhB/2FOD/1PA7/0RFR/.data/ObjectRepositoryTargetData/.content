@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eUo8kOLDI0WgBWH1hQpfUg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/0RFRJnE4xk632zZacWCcnw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cafe.naver.com/fitthesize#" DesignTimeRectangle="583, 789, 72, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='카페소개' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='카페소개' tag='A' type='' class='u gm-tcol-c' check:innerText='카페소개' /&gt;" Guid="7be1a95e-9648-4d89-b245-74ef76151e43" ScopeSelectorArgument="&lt;html app='chrome.exe' title='핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="469, 651, 150, 57" ElementType="Button" FullSelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' aaname='카페정보' check:innerText='카페정보' /&gt;" Guid="03d6ceec-5e3c-4fc3-b146-4bbfb9bdce02" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b04ea369425abe917e20ac72e6db70f9.png" xmlns="">0LZk_QCqGIk68Y6IJz8q0tg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

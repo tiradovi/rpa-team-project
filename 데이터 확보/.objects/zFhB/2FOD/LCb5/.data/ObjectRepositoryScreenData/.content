@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="l6J7WQDtD0-RMbcvV9nJ3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube - Chrome' /&gt;" Url="[Nothing]" />
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

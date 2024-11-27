@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mDespVu4_UmzdOrFVk7-CQ" Reference="UMapJjqJ0E6jRh_vq7ZJJg/Q02BzVXfVUufIqxzg0l_oQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cafe.naver.com/zzang9daddy" DesignTimeRectangle="583, 921, 72, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='카페소개' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='카페소개' tag='A' type='' class='u gm-tcol-c' check:innerText='카페소개' /&gt;" Guid="367dde8b-b002-4629-a564-807f0f174bb8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="469, 783, 150, 57" ElementType="Button" FullSelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' aaname='카페정보' check:innerText='카페정보' /&gt;" Guid="646894eb-02c0-47e0-ab58-a14bfc188a23" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a8d57fd87157e93cac54fbc74810cace.png" xmlns="">0rNt-5srfzE6a3H00Hwj6mQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YdQFh8V5M06rojV5Km8tfg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/bjRFH4PGH0KNpe6RvXtz5Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cafe.naver.com/zzang9daddy" DesignTimeRectangle="685, 1297, 69, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='482,669' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='gm-tcol-c total' /&gt;" Guid="fcc034f0-3bec-4848-8636-afbe481a2562" ScopeSelectorArgument="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="507, 1302, 97, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' type='' check:innerText='전체글보기' /&gt;" Guid="f29923af-6bfc-4c68-aa1f-93a04aa17aa4" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="26953534982e3e85f6e7b3308caa0420.png" xmlns="">0gIDcxi05B02-ugvez7V3kg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

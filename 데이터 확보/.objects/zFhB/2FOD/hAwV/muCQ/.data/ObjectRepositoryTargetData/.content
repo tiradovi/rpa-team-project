@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AypTbbrQnUaBnT8G3k-zeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://cafe.naver.com/kkangstylist" DesignTimeRectangle="2016, 928, 58, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='98,449' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='gm-tcol-c total' /&gt;" Guid="2a9d2c0c-ec74-4b27-89c9-1adb97214f0a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KKST [한국 브랜드 커뮤니티] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="1827, 933, 97, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' type='' check:innerText='전체글보기' /&gt;" Guid="a3c09a34-52f8-486d-908e-e5abdaa0d55a" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="87b17ec7b85efb3bf9edcf9dfd57cfda.png" xmlns="">0gN5O6VQFT0yEkELfvGnYuA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

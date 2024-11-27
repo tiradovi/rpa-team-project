@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pxAG7pgA-ky03S0qreL01g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.youtube.com/watch?v=ESD3Tyou200&amp;t=500s" DesignTimeRectangle="1164, 1364, 37, 55" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 232명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 232명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="28f32e05-2a68-427c-aeeb-dbae3e7fc861" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='2024ver. 남친룩 월드컵 - YouTube - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="1374, 1364, 43, 55" FullSelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' check:text='공유' /&gt;" Guid="1bf51481-4350-4ebd-9991-23c601fd4151" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="023dfd492851c571c89b20dfcd40a542.png" xmlns="">0tesCTTUl-USSU0O20rcsRg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

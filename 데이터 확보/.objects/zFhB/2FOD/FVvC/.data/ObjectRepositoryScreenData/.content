@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="S8ErOjcqpk2cEdDQkTDvcw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube - Chrome' /&gt;" Url="[Nothing]" />
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,109 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "subscriber&",
+        "likenumber&",
+        "views&",
+        "comment&",
+        "todayDate&",
+        "firstindex&",
+        "lastindex&",
+        "newValue&",
+        "lastValue&",
+        "subscriber&",
+        "likenumber&",
+        "views&",
+        "comment&",
+        "todayDate&",
+        "firstindex&",
+        "lastindex&",
+        "newValue&",
+        "lastValue&",
+        "subscriber&",
+        "views&",
+        "likenumber&",
+        "comment&",
+        "todayDate&",
+        "firstindex&",
+        "lastindex&",
+        "newValue&",
+        "lastValue&"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "instance&Sequence_1",
+        "lastJvalue&Sequence_1",
+        "newJvalue&Sequence_1",
+        "rowIndex&Sequence_1",
+        "dt&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "네이버 카페 데이터 확보.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "lastJValue&Sequence_8",
+        "lastindex&Sequence_8",
+        "firstIndex&Sequence_8",
+        "todayDateString&Sequence_8",
+        "newJvalue&Sequence_8",
+        "cafemember&Sequence_8",
+        "cafepost&Sequence_8",
+        "cafevisitant&Sequence_8",
+        "dt&Sequence_28",
+        "lastJvalue&Sequence_28"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "유튜브 데이터 확보.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "todayDate&Sequence_18",
+        "firstindex&Sequence_18",
+        "lastindex&Sequence_18",
+        "newValue&Sequence_18",
+        "lastValue&Sequence_18",
+        "comment&Sequence_17",
+        "likenumber&Sequence_17",
+        "views&Sequence_17",
+        "subscriber&Sequence_17",
+        "todayDate&Sequence_11",
+        "firstindex&Sequence_11",
+        "lastindex&Sequence_11",
+        "newValue&Sequence_11",
+        "lastValue&Sequence_11",
+        "subscriber&Sequence_9",
+        "comment&Sequence_9",
+        "views&Sequence_9",
+        "likenumber&Sequence_9",
+        "lastValue&Sequence_4",
+        "newValue&Sequence_4",
+        "lastindex&Sequence_4",
+        "firstindex&Sequence_4",
+        "todayDate&Sequence_4",
+        "comment&Sequence_2",
+        "views&Sequence_2",
+        "likenumber&Sequence_2",
+        "subscriber&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

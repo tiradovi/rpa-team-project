@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Get Text '짱구대디'",
+  "Type": "Element",
+  "Id": "i2HNNh8LNEuXmIkEFVtScw",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/i2HNNh8LNEuXmIkEFVtScw",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/09cE4AY7N0C8cI4PTq5NJw",
+  "Created": "2024-06-16T12:09:36.355069Z",
+  "Updated": "2024-06-16T12:09:36.355069Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

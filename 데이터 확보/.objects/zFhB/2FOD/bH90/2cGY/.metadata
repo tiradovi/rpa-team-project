@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Get Text 'SPAN'",
+  "Type": "Element",
+  "Id": "2cGYAXf5REq1g_5o2eLxKw",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/2cGYAXf5REq1g_5o2eLxKw",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/bH90dGMem0GXfzz6spUzmg",
+  "Created": "2024-06-16T12:09:37.383338Z",
+  "Updated": "2024-06-16T12:09:37.383338Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

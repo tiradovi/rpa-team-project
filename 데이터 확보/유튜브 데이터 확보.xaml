@@ -1,0 +1,951 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="유튜브_데이터_확보" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="987.3333333333335,14402.666666666666" sap2010:WorkflowViewState.IdRef="유튜브_데이터_확보_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="유튜브_데이터_확보" sap:VirtualizedContainerService.HintSize="1030,14244.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 핏더사이즈 - YouTube" sap:VirtualizedContainerService.HintSize="722,4666" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="136b810d-737a-4fd8-9b39-b9c44cad8c34" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="660,4414.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="subscriber" />
+              <Variable x:TypeArguments="x:String" Name="likenumber" />
+              <Variable x:TypeArguments="x:String" Name="views" />
+              <Variable x:TypeArguments="x:String" Name="comment" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'grouping  조회수 " sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_3">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="870a8012-9110-486f-a1ff-49db67f62b94" InformativeScreenshot="307dc00badb6fd2570cf354d76d4d4f0" Selector="&lt;webctrl aaname='조회수 5만회' css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-browse&amp;gt;ytd-two-column-browse-results-renderer&amp;gt;div&amp;gt;ytd-rich-grid-renderer&amp;gt;div&amp;gt;ytd-rich-grid-row&amp;gt;div&amp;gt;ytd-rich-item-renderer&amp;gt;div&amp;gt;ytd-rich-grid-media&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ytd-video-meta-block&amp;gt;div&amp;gt;div&amp;gt;span' parentid='metadata-line' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DisplayName="Click '최신순'" sap:VirtualizedContainerService.HintSize="626,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="136b810d-737a-4fd8-9b39-b9c44cad8c34" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/@fitthesize/videos" CVScreenId="447b14aa-1ef6-4dc5-a91c-f60553a35a7c" ContentHash="b5GU8fIO_ESStqGBHogEnA" CvTextArea="897, 1344, 37, 19" CvTextArgument="9:33" CvType="Text" DesignTimeRectangle="496, 1127, 457, 257" DesignTimeScaleFactor="1.5" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='         9:33     9:33   지금 재생 중                                ' parentid='thumbnail' src='https://i.ytimg.com/vi/xQYrJ-uoUis/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;amp;rs=AOn4CLBzKac_Hoz1tpPjRjGFarTTvaTVwA' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         9:33     9:33   지금 재생 중                                ' parentid='thumbnail' src='https://i.ytimg.com/vi/xQYrJ-uoUis/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;amp;rs=AOn4CLBzKac_Hoz1tpPjRjGFarTTvaTVwA' tag='IMG' type='' class='yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded' /&gt;" Guid="a4543163-c518-4f5e-81c4-d54ef974809a" InformativeScreenshot="343f7c51290ce8872c73047a610bc718.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/7ibP5pgSK02eMAqfGM4Fdg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='핏더사이즈 - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="447b14aa-1ef6-4dc5-a91c-f60553a35a7c" CvElementArea="491, 1050, 106, 56" CvTextArea="512, 1064, 64, 25" CvTextArgument="ANe" CvType="Button" DesignTimeRectangle="514, 1064, 63, 30" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-browse&amp;gt;ytd-two-column-browse-results-renderer&amp;gt;div&amp;gt;ytd-rich-grid-renderer&amp;gt;div&amp;gt;ytd-feed-filter-chip-bar-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;iron-selector&amp;gt;yt-chip-cloud-chip-renderer&amp;gt;yt-formatted-string' id='text' idx='11' parentid='chips' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' id='text' class='style-scope yt-chip-cloud-chip-renderer' parentid='chips' tag='YT-FORMATTED-STRING' aaname='최신순' check:innerText='최신순' /&gt;" Guid="38fb5d48-389b-4f31-ae2b-554954925c7c" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText ContinueOnError="True" DisplayName="Get Text '구독자수'" sap:VirtualizedContainerService.HintSize="626,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="136b810d-737a-4fd8-9b39-b9c44cad8c34" TextString="[subscriber]" Timeout="4" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=BBK3D4ixTWY" CVScreenId="7c87f23f-5b54-4ba1-ad74-ecd33798fdea" ContentHash="V1upYhI3sUGHwBScIQoXkA" CvTextArea="140, 1454, 115, 21" CvType="AnyWordGroup" DesignTimeRectangle="142, 1454, 141, 27" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' type='' class='style-scope ytd-video-owner-renderer' /&gt;" Guid="d0db96be-1715-461c-9e98-f6a77777682d" InformativeScreenshot="1dd2814f7e1225729ab4246ac13208c1.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/qPt_iayYOUaXONV4YJE6hg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="7c87f23f-5b54-4ba1-ad74-ecd33798fdea" CvTextArea="141, 1422, 121, 25" CvTextArgument="NlCAF0IX" CvType="Text" DesignTimeRectangle="141, 1423, 120, 25" ElementType="Text" Guid="5760bf2b-a7d3-498c-8540-4d0e1c5405d4" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'grouping'" sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_4">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b0bb008a-e537-4f7e-8bf7-709aa1d60fb4" InformativeScreenshot="bde562a940196dd9ec7de567b22c1453" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube - Chrome' /&gt;&lt;ctrl name='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 716명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" TimeoutMS="5000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[likenumber]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="커서 이동" sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="ddf1a42a-e15e-4037-a24e-3d7c0a86d1a2" InformativeScreenshot="4e7dbb97f387c58cbf8cd16d87414f26" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube - Chrome' /&gt;&lt;ctrl name='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube' role='document' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="1690, 432, 11, 136" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NGetText DisplayName="Get Text '댓글'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="136b810d-737a-4fd8-9b39-b9c44cad8c34" TextString="[comment]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=xQYrJ-uoUis&amp;t=102s" CVScreenId="6b40d1ac-5fea-4673-b13d-32d2449d682e" ContentHash="XjMzJ2v1Y0GRaDlb0KIMbw" CvTextArea="129, 530, 64, 33" CvType="AnyWordGroup" DesignTimeRectangle="131, 529, 34, 37" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='46' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' /&gt;" Guid="1abcca54-eeef-4eae-8be4-b8d2ab920ed1" InformativeScreenshot="6ae01b1809b19e730fbf82de0c15e08a.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/hLZmz7ilRkyOu1f6RvxlKw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='이건 안 샀으면 좋겠어.. 당신에게 꼭 맞는 꿀템 추천vs비추천 - YouTube' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="6b40d1ac-5fea-4673-b13d-32d2449d682e" CvTextArea="63, 528, 58, 34" CvTextArgument="5l3" CvType="Text" DesignTimeRectangle="64, 529, 67, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' check:innerText='댓글' /&gt;" Guid="a6cb2a62-b2ce-4264-b1af-18391dfc184f" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[subscriber.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="626,678.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[subscriber.Replace(",", "").Replace(" ", "").Replace("구독자", "").Replace("만", "000").Replace("명", "").Replace(".","")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,312" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[subscriber.Replace(",", "").Replace(" ", "").Replace("구독자", "").Replace("만", "0000").Replace("명", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(subscriber, "\.\d+", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[views.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="626,678.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[views.Replace(",", "").Replace(" ", "").Replace("조회수", "").Replace("만", "000").Replace("회", "").Replace(".","")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,312" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[views.Replace(",", "").Replace(" ", "").Replace("조회수", "").Replace("만", "0000").Replace("회", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_25">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(views, "\.\d+", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,1965.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,1852.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1764.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="496,1468" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="todayDate" />
+                              <Variable x:TypeArguments="x:Int32" Name="firstindex" />
+                              <Variable x:TypeArguments="x:Int32" Name="lastindex" />
+                              <Variable x:TypeArguments="x:Double" Name="newValue" />
+                              <Variable x:TypeArguments="x:Double" Name="lastValue" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[todayDate]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="유튜브" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[firstindex]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_1" LastRowIndex="[lastindex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;핏더사이즈&quot;)]" VisibleRowsOnly="False" />
+                            <ui:ExcelWriteCell Cell="[&quot;A&quot;+(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="핏더사이즈" Text="[todayDate]" />
+                            <ui:ExcelWriteCell Cell="[&quot;B&quot;+ (lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="핏더사이즈" Text="[subscriber]" />
+                            <ui:ExcelReadCell Result="{x:Null}" Cell="[&quot;B&quot; + (lastindex).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="핏더사이즈" />
+                            <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[newValue]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[CDbl(subscriber)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ExcelWriteCell Cell="[&quot;C&quot; +(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="핏더사이즈" Text="[(newValue - lastValue).ToString()]" />
+                            <ui:ExcelWriteCell Cell="F15" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="인플루언서현황일일보고서" Text="[views]" />
+                            <ui:ExcelWriteCell Cell="F16" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="인플루언서현황일일보고서" Text="[comment]" />
+                            <ui:ExcelWriteCell Cell="F17" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,110.66666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="인플루언서현황일일보고서" Text="[likenumber]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 2582, 1562" BrowserType="Chrome" ContentHash="yXisg-H2iEG32bzKTCE6qg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACp0lEQVRYR8XXz0tUURQH8K8/8hZiYfmDmqgLuQhrE+1diLRxldAfEIQQBBJIIkHQKqpFG0FIEVsFQlGJRokEgqFgmo7m2GCvH8yEjDkkIaLl6XsfDoGc12g4rwufWZxz7j2H92OYgYj8V2owTGowTGowTFhdXfWt0Dda2JTe9J3kjzwq+It88mvXKXPGEmXOTdEPyvSFtRYROk6XrD3Tae3lfmvvxqztnrf26WdrBzesHRZr39AkzdI7hYtP0ziNrlg7xP0v6XHU2q4+a+/w7CtN1tactjbvMPu53v46CBQ/Abo3gF/+XcmxceDVSeCY37wQyBtgc60wl2LAUAlQhHPAWQZ+bi0Iw3mgFjeBJi0ZhnvAdTwE2rVkGHqBB3gNPNOSgcrLRVpbRUpL9fwOsPcA4sCwlgzkBlhfF4nHRRoa9Jpt+gSMg09jVEsGKisTSaX4Jba5enpEqqr02iySwJwbYE5LBto6gFvptEhzs0hRkb4nQAL4whEQ05KBtAEya2JCpL5e36f4CiTxYTeuQGa5K9HYqO9TLLgBduUWuNXRIRKJ6HsC8BYk3AAzWjLQ1gHGxkTq6vTaLDjAPN4DI1oykBtgbU1keVmkpUXEGL1uG/gWTGEM6NeSgSorRbq6RKqr9fwOsPcQeoBOLRkoP1+P/4NBsP1t4JqWDEM7cAsNQI2WDEMj2L4Y2DMJvNAKcolfQjNHAf4m4ToFRKb5QGiFucDXb7rWb8tljHEfqDCm8KoxFx4Z0zZiTF/CmJGkMbOLxnzkq5akFKVpOYslcrVJt9edwbNGeebzXmPu3zDm4gljSlxPv7fneb44vaUpilGCkp5XsOh5+8TzDtAhqqQjWVSQq93PvXvdGe4sd2aUXI85yvTlNdH/MIRFDYZJDYZJDYZH8BtrTS5QuubtDwAAAABJRU5ErkJggg==" InformativeScreenshot="995f933cebfb34e119e44488e2bc2f8a.jpg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/2_G9CfCOSUueIntbAuWWbg" Selector="&lt;html app='chrome.exe' title='핏더사이즈 - YouTube' /&gt;" Title="핏더사이즈 - YouTube" Url="https://www.youtube.com/@fitthesize/videos" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 깡스타일리스트 - YouTube" sap:VirtualizedContainerService.HintSize="722,4782.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="27e4bb83-43e7-4759-96ee-7d321d1452f8" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="688,4492" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="subscriber" />
+              <Variable x:TypeArguments="x:String" Name="likenumber" />
+              <Variable x:TypeArguments="x:String" Name="views" />
+              <Variable x:TypeArguments="x:String" Name="comment" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="3" DisplayName="Click '최신순'" sap:VirtualizedContainerService.HintSize="626,228" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="27e4bb83-43e7-4759-96ee-7d321d1452f8" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/@kkang.stylist/videos" ContentHash="TS2xNR_ZL0-bkw7mKWEGUw" DesignTimeRectangle="496, 1127, 457, 257" DesignTimeScaleFactor="1.5" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='         18:06     18:06   지금 재생 중                                ' parentid='thumbnail' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         18:06     18:06   지금 재생 중                                ' parentid='thumbnail' tag='IMG' type='' class='yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded' /&gt;" Guid="b76a1dd6-2076-424e-ac78-afb6427800d3" InformativeScreenshot="e76d461274114fe9b4c5777b3c3815c8.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/qqe1mT2TFk2MTLXBJWykOg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='깡스타일리스트 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="514, 1064, 63, 30" FullSelectorArgument="&lt;webctrl id='text' parentid='chips' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl id='text' parentid='chips' tag='YT-FORMATTED-STRING' type='' class='style-scope yt-chip-cloud-chip-renderer' aaname='최신순' check:innerText='최신순' /&gt;" Guid="1b939a11-f9cf-471c-9ecc-800c96520ad2" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text '깡스타일리스트'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="27e4bb83-43e7-4759-96ee-7d321d1452f8" TextString="[subscriber]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=w6UUYTg5oKQ&amp;t=198s" ContentHash="4ynkHP__fEekZZ8JYTnneA" DesignTimeRectangle="142, 1454, 189, 27" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' type='' class='style-scope ytd-video-owner-renderer' /&gt;" Guid="84098945-6d3f-4d44-bb18-4363ca830779" InformativeScreenshot="b3fa74e9ad46ce53a3705e5ebc8f8447.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/QqcobPNmLUaQV5z8SCc_PQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="142, 1421, 170, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='text' tag='A' type='' class='yt-simple-endpoint style-scope yt-formatted-string' aaname='깡스타일리스트' check:innerText='깡스타일리스트' /&gt;" Guid="3cd3a761-0d61-4c54-a754-0c0bf8714b91" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '공유'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="27e4bb83-43e7-4759-96ee-7d321d1452f8" TextString="[likenumber]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=w6UUYTg5oKQ&amp;t=198s" ContentHash="TiGuV8bcKE2JOeMM1L0EiA" DesignTimeRectangle="1121, 1424, 37, 54" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl name='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 568명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 568명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="ed601dca-d02c-4483-b201-86af91f98605" InformativeScreenshot="08b415794d7ca60a6e84f5df43e57cef.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/nPIZiKTK3EW-3K_DB9_6hQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1331, 1424, 43, 54" FullSelectorArgument="&lt;ctrl name='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' check:text='공유' /&gt;" Guid="e2cdfd0e-75eb-4ba3-8b8d-9969bdcb9163" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_1">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7bfde1bf-bc06-48e4-9c36-c8617dd4eaa3" InformativeScreenshot="88c115ddbe5ee862c3984e7b0cf9feb7" Selector="&lt;html app='chrome.exe' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' /&gt;&lt;webctrl parentid='info' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'document 이'" sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="422cd88b-21a3-401f-b300-939b40595585" InformativeScreenshot="cef55c92ccf30b8eb8f6ec5f21a6ba06" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube - Chrome' /&gt;&lt;ctrl name='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' role='document' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="1691, 403, 11, 134" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NGetText DisplayName="Get Text '댓글'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="27e4bb83-43e7-4759-96ee-7d321d1452f8" TextString="[comment]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=w6UUYTg5oKQ&amp;t=198s" ContentHash="zia655oG3k-XG-ZG6yQGFA" DesignTimeRectangle="131, 667, 52, 37" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='296' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' /&gt;" Guid="944c71e4-8478-4a0d-b36b-23fc5c054d18" InformativeScreenshot="3d0ad1e8898a34ecdc79448ba2c7b7d8.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/GktqVgz4r0mXUQeR9QLj5A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='이 신발은 그냥 사세요.. 올여름 최고의 신발 30%할인, 장마철 코디까지 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="64, 667, 67, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' check:innerText='댓글' /&gt;" Guid="690b73c5-5594-4ec6-86b4-b570681177bc" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[subscriber.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="626,678.6666666666666" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[subscriber.Replace(",", "").Replace(" ", "").Replace("구독자", "").Replace("만", "000").Replace("명", "").Replace(".","")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,312" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[subscriber.Replace(",", "").Replace(" ", "").Replace("구독자", "").Replace("만", "0000").Replace("명", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(subscriber, "\.\d+", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[views.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="626,678.6666666666666" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_12">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[views.Replace(",", "").Replace(" ", "").Replace("조회수", "").Replace("만", "000").Replace("회", "").Replace(".","")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,312" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[views.Replace(",", "").Replace(" ", "").Replace("조회수", "").Replace("만", "0000").Replace("회", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_14">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(views, "\.\d+", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,1965.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,1852.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1764.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="496,1468" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="todayDate" />
+                              <Variable x:TypeArguments="x:Int32" Name="firstindex" />
+                              <Variable x:TypeArguments="x:Int32" Name="lastindex" />
+                              <Variable x:TypeArguments="x:Double" Name="newValue" />
+                              <Variable x:TypeArguments="x:Double" Name="lastValue" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_15">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[todayDate]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="유튜브" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[firstindex]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_2" LastRowIndex="[lastindex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;깡스타일리스트&quot;)]" VisibleRowsOnly="False" />
+                            <ui:ExcelWriteCell Cell="[&quot;A&quot;+(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="깡스타일리스트" Text="[todayDate]" />
+                            <ui:ExcelWriteCell Cell="[&quot;B&quot;+ (lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="깡스타일리스트" Text="[subscriber]" />
+                            <ui:ExcelReadCell Result="{x:Null}" Cell="[&quot;B&quot; + (lastindex).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="깡스타일리스트" />
+                            <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_16">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[newValue]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[CDbl(subscriber)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ExcelWriteCell Cell="[&quot;C&quot; +(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="깡스타일리스트" Text="[(newValue - lastValue).ToString()]" />
+                            <ui:ExcelWriteCell Cell="F39" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="인플루언서현황일일보고서" Text="[views]" />
+                            <ui:ExcelWriteCell Cell="F40" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="인플루언서현황일일보고서" Text="[comment]" />
+                            <ui:ExcelWriteCell Cell="F41" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,110.66666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="인플루언서현황일일보고서" Text="[likenumber]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 2582, 1562" BrowserType="Chrome" ContentHash="NHzt3L5Lz063ZX0Heb4zaQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACp0lEQVRYR8XXz0tUURQH8K8/8hZiYfmDmqgLuQhrE+1diLRxldAfEIQQBBJIIkHQKqpFG0FIEVsFQlGJRokEgqFgmo7m2GCvH8yEjDkkIaLl6XsfDoGc12g4rwufWZxz7j2H92OYgYj8V2owTGowTGowTFhdXfWt0Dda2JTe9J3kjzwq+It88mvXKXPGEmXOTdEPyvSFtRYROk6XrD3Tae3lfmvvxqztnrf26WdrBzesHRZr39AkzdI7hYtP0ziNrlg7xP0v6XHU2q4+a+/w7CtN1tactjbvMPu53v46CBQ/Abo3gF/+XcmxceDVSeCY37wQyBtgc60wl2LAUAlQhHPAWQZ+bi0Iw3mgFjeBJi0ZhnvAdTwE2rVkGHqBB3gNPNOSgcrLRVpbRUpL9fwOsPcA4sCwlgzkBlhfF4nHRRoa9Jpt+gSMg09jVEsGKisTSaX4Jba5enpEqqr02iySwJwbYE5LBto6gFvptEhzs0hRkb4nQAL4whEQ05KBtAEya2JCpL5e36f4CiTxYTeuQGa5K9HYqO9TLLgBduUWuNXRIRKJ6HsC8BYk3AAzWjLQ1gHGxkTq6vTaLDjAPN4DI1oykBtgbU1keVmkpUXEGL1uG/gWTGEM6NeSgSorRbq6RKqr9fwOsPcQeoBOLRkoP1+P/4NBsP1t4JqWDEM7cAsNQI2WDEMj2L4Y2DMJvNAKcolfQjNHAf4m4ToFRKb5QGiFucDXb7rWb8tljHEfqDCm8KoxFx4Z0zZiTF/CmJGkMbOLxnzkq5akFKVpOYslcrVJt9edwbNGeebzXmPu3zDm4gljSlxPv7fneb44vaUpilGCkp5XsOh5+8TzDtAhqqQjWVSQq93PvXvdGe4sd2aUXI85yvTlNdH/MIRFDYZJDYZJDYZH8BtrTS5QuubtDwAAAABJRU5ErkJggg==" InformativeScreenshot="2350251d111e8cb21dc5690d00db4c4c.jpg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/hGIrXyzpwEO_4GKU9LsB7Q" Selector="&lt;html app='chrome.exe' title='깡스타일리스트 - YouTube' /&gt;" Title="깡스타일리스트 - YouTube" Url="https://www.youtube.com/@kkang.stylist/videos" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 짱구대디 - YouTube" sap:VirtualizedContainerService.HintSize="722,4773.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="a686a17b-7f25-4e95-8baa-089de66fc3aa" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="688,4492" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="subscriber" />
+              <Variable x:TypeArguments="x:String" Name="views" />
+              <Variable x:TypeArguments="x:String" Name="likenumber" />
+              <Variable x:TypeArguments="x:String" Name="comment" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '최신순'" sap:VirtualizedContainerService.HintSize="626,228" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a686a17b-7f25-4e95-8baa-089de66fc3aa" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/@zzang9daddy/videos" ContentHash="AyoJq7mu4E6rdXNQFXi5-w" DesignTimeRectangle="496, 1049, 457, 257" DesignTimeScaleFactor="1.5" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='         16:21     16:21   지금 재생 중                                ' parentid='thumbnail' src='https://i.ytimg.com/vi/ESD3Tyou200/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;amp;rs=AOn4CLBHLS-SuIvptGnHWAFN4sJ8UNgABg' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         16:21     16:21   지금 재생 중                                ' parentid='thumbnail' src='https://i.ytimg.com/vi/ESD3Tyou200/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;amp;rs=AOn4CLBHLS-SuIvptGnHWAFN4sJ8UNgABg' tag='IMG' type='' class='yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded' /&gt;" Guid="f85d4d9f-3737-408e-b4f0-0db7a54a679d" InformativeScreenshot="be0a8b1cd23433e952c133f3e1c2bd6e.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/vv0LfrWwSUS2GVKTo9E8XA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='짱구대디 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="514, 986, 63, 30" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;ytd-app&amp;gt;div&amp;gt;ytd-page-manager&amp;gt;ytd-browse&amp;gt;ytd-two-column-browse-results-renderer&amp;gt;div&amp;gt;ytd-rich-grid-renderer&amp;gt;div&amp;gt;ytd-feed-filter-chip-bar-renderer&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;iron-selector&amp;gt;yt-chip-cloud-chip-renderer&amp;gt;yt-formatted-string' id='text' parentid='chips' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' id='text' parentid='chips' tag='YT-FORMATTED-STRING' class='style-scope yt-chip-cloud-chip-renderer' aaname='최신순' check:innerText='최신순' /&gt;" Guid="0d345f9b-e539-4a3b-8550-65bfdb59ecdc" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text '짱구대디'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="a686a17b-7f25-4e95-8baa-089de66fc3aa" TextString="[subscriber]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=ESD3Tyou200&amp;t=500s" ContentHash="DS-eWBWscEqaHqAsOkELlA" DesignTimeRectangle="125, 1395, 130, 27" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' type='' class='style-scope ytd-video-owner-renderer' /&gt;" Guid="8313fad2-b810-45bb-a406-a1cd44ade0e0" InformativeScreenshot="19a571768da52be889a7fc00290fb8e7.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/i2HNNh8LNEuXmIkEFVtScw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='2024ver. 남친룩 월드컵 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="125, 1362, 98, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='text' tag='A' type='' class='yt-simple-endpoint style-scope yt-formatted-string' aaname='짱구대디' check:innerText='짱구대디' /&gt;" Guid="f167fa07-2166-4286-8c3b-956f521b2214" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_2">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b26b18e-e8f2-4862-b43c-f070582ec372" InformativeScreenshot="3ad620e8a79f78fc6a12fc874e8c89f8" Selector="&lt;html app='chrome.exe' title='2024ver. 남친룩 월드컵 - YouTube' /&gt;&lt;webctrl parentid='info' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <uix:NGetText DisplayName="Get Text '공유'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="a686a17b-7f25-4e95-8baa-089de66fc3aa" TextString="[likenumber]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=ESD3Tyou200&amp;t=500s" ContentHash="pxAG7pgA-ky03S0qreL01g" DesignTimeRectangle="1164, 1364, 37, 55" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 232명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='나 외에 사용자 232명이 이 동영상을 좋아함' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="28f32e05-2a68-427c-aeeb-dbae3e7fc861" InformativeScreenshot="023dfd492851c571c89b20dfcd40a542.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/TnY3kFzvREiHU--SQ0kc8w" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='2024ver. 남친룩 월드컵 - YouTube - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1374, 1364, 43, 55" FullSelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;&lt;ctrl name='공유' role='push button' /&gt;&lt;ctrl role='grouping' automationid='' check:text='공유' /&gt;" Guid="1bf51481-4350-4ebd-9991-23c601fd4151" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'document 2024ver.'" sap:VirtualizedContainerService.HintSize="626,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="39c8ba63-3ba2-4de8-9508-a7cc50e70620" InformativeScreenshot="99cbbbfb8b452ce4e55e7196a18493ce" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='2024ver. 남친룩 월드컵 - YouTube - Chrome' /&gt;&lt;ctrl name='2024ver. 남친룩 월드컵 - YouTube' role='document' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="1690, 414, 10, 126" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NGetText DisplayName="Get Text '댓글'" sap:VirtualizedContainerService.HintSize="626,190.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="a686a17b-7f25-4e95-8baa-089de66fc3aa" TextString="[comment]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.youtube.com/watch?v=ESD3Tyou200&amp;t=500s" ContentHash="5rlBa1AyR0Gs4NxEn5Z-RA" DesignTimeRectangle="114, 886, 35, 37" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='66' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' /&gt;" Guid="deac65c0-8908-4952-bcc0-150805dae79d" InformativeScreenshot="d658e212abc851219b4c8c7bcd9b9100.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/FW-exslLOkCqI_1aRYZD-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='2024ver. 남친룩 월드컵 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="47, 886, 67, 37" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='댓글 ' parentid='count' tag='SPAN' type='' class='style-scope yt-formatted-string' check:innerText='댓글' /&gt;" Guid="9487ef1e-6359-4143-9150-3da67ce84262" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[subscriber.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="626,678.6666666666666" sap2010:WorkflowViewState.IdRef="If_5">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_17">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[subscriber.Replace(",", "").Replace(" ", "").Replace("구독자", "").Replace("만", "000").Replace("명", "").Replace(".","")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,312" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_18">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[subscriber.Replace(",", "").Replace(" ", "").Replace("구독자", "").Replace("만", "0000").Replace("명", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_19">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[subscriber]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(subscriber, "\.\d+", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[views.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="626,678.6666666666666" sap2010:WorkflowViewState.IdRef="If_6">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[views.Replace(",", "").Replace(" ", "").Replace("조회수", "").Replace("만", "000").Replace("회", "").Replace(".","")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,312" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_21">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[views.Replace(",", "").Replace(" ", "").Replace("조회수", "").Replace("만", "0000").Replace("회", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,107.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_22">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[views]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(views, "\.\d+", "")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,1965.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,1852.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1764.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="496,1468" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="todayDate" />
+                              <Variable x:TypeArguments="x:Int32" Name="firstindex" />
+                              <Variable x:TypeArguments="x:Int32" Name="lastindex" />
+                              <Variable x:TypeArguments="x:Double" Name="newValue" />
+                              <Variable x:TypeArguments="x:Double" Name="lastValue" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_23">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[todayDate]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd")]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="유튜브" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[firstindex]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_3" LastRowIndex="[lastindex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;짱구대디&quot;)]" VisibleRowsOnly="False" />
+                            <ui:ExcelWriteCell Cell="[&quot;A&quot;+(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="짱구대디" Text="[todayDate]" />
+                            <ui:ExcelWriteCell Cell="[&quot;B&quot;+ (lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="짱구대디" Text="[subscriber]" />
+                            <ui:ExcelReadCell Result="{x:Null}" Cell="[&quot;B&quot; + (lastindex).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="짱구대디" />
+                            <Assign sap:VirtualizedContainerService.HintSize="434,116.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_24">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[newValue]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[CDbl(subscriber)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ExcelWriteCell Cell="[&quot;C&quot; +(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="짱구대디" Text="[(newValue - lastValue).ToString()]" />
+                            <ui:ExcelWriteCell Cell="F49" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="인플루언서현황일일보고서" Text="[views]" />
+                            <ui:ExcelWriteCell Cell="F50" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="인플루언서현황일일보고서" Text="[comment]" />
+                            <ui:ExcelWriteCell Cell="F51" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,110.66666666666667" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="인플루언서현황일일보고서" Text="[likenumber]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 2582, 1562" BrowserType="Chrome" ContentHash="8kYmvOOIiE6htExz55I6QA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACp0lEQVRYR8XXz0tUURQH8K8/8hZiYfmDmqgLuQhrE+1diLRxldAfEIQQBBJIIkHQKqpFG0FIEVsFQlGJRokEgqFgmo7m2GCvH8yEjDkkIaLl6XsfDoGc12g4rwufWZxz7j2H92OYgYj8V2owTGowTGowTFhdXfWt0Dda2JTe9J3kjzwq+It88mvXKXPGEmXOTdEPyvSFtRYROk6XrD3Tae3lfmvvxqztnrf26WdrBzesHRZr39AkzdI7hYtP0ziNrlg7xP0v6XHU2q4+a+/w7CtN1tactjbvMPu53v46CBQ/Abo3gF/+XcmxceDVSeCY37wQyBtgc60wl2LAUAlQhHPAWQZ+bi0Iw3mgFjeBJi0ZhnvAdTwE2rVkGHqBB3gNPNOSgcrLRVpbRUpL9fwOsPcA4sCwlgzkBlhfF4nHRRoa9Jpt+gSMg09jVEsGKisTSaX4Jba5enpEqqr02iySwJwbYE5LBto6gFvptEhzs0hRkb4nQAL4whEQ05KBtAEya2JCpL5e36f4CiTxYTeuQGa5K9HYqO9TLLgBduUWuNXRIRKJ6HsC8BYk3AAzWjLQ1gHGxkTq6vTaLDjAPN4DI1oykBtgbU1keVmkpUXEGL1uG/gWTGEM6NeSgSorRbq6RKqr9fwOsPcQeoBOLRkoP1+P/4NBsP1t4JqWDEM7cAsNQI2WDEMj2L4Y2DMJvNAKcolfQjNHAf4m4ToFRKb5QGiFucDXb7rWb8tljHEfqDCm8KoxFx4Z0zZiTF/CmJGkMbOLxnzkq5akFKVpOYslcrVJt9edwbNGeebzXmPu3zDm4gljSlxPv7fneb44vaUpilGCkp5XsOh5+8TzDtAhqqQjWVSQq93PvXvdGe4sd2aUXI85yvTlNdH/MIRFDYZJDYZJDYZH8BtrTS5QuubtDwAAAABJRU5ErkJggg==" InformativeScreenshot="a476f2152fd4abafb3acd9332602c000.jpg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/09cE4AY7N0C8cI4PTq5NJw" Selector="&lt;html app='chrome.exe' title='짱구대디 - YouTube' /&gt;" Title="짱구대디 - YouTube" Url="https://www.youtube.com/@zzang9daddy/videos" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

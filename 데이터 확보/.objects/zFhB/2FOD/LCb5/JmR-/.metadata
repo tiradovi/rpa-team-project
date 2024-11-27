@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Click 'document 이'",
+  "Type": "Element",
+  "Id": "JmR-5fuKt0SiOzSqrfOO0g",
+  "Reference": "UMapJjqJ0E6jRh_vq7ZJJg/JmR-5fuKt0SiOzSqrfOO0g",
+  "ParentRef": "UMapJjqJ0E6jRh_vq7ZJJg/LCb5YTIjW0ee8ZSMaUE1vg",
+  "Created": "2024-06-16T11:49:53.7667173Z",
+  "Updated": "2024-06-16T11:49:53.7667173Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

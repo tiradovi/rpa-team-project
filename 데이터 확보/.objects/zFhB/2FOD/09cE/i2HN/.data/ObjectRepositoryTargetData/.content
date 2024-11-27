@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DS-eWBWscEqaHqAsOkELlA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.youtube.com/watch?v=ESD3Tyou200&amp;t=500s" DesignTimeRectangle="125, 1395, 130, 27" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' /&gt;" FuzzySelectorArgument="&lt;webctrl id='owner-sub-count' tag='YT-FORMATTED-STRING' type='' class='style-scope ytd-video-owner-renderer' /&gt;" Guid="8313fad2-b810-45bb-a406-a1cd44ade0e0" ScopeSelectorArgument="&lt;html app='chrome.exe' title='2024ver. 남친룩 월드컵 - YouTube' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="125, 1362, 98, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='text' tag='A' type='' class='yt-simple-endpoint style-scope yt-formatted-string' aaname='짱구대디' check:innerText='짱구대디' /&gt;" Guid="f167fa07-2166-4286-8c3b-956f521b2214" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="19a571768da52be889a7fc00290fb8e7.png" xmlns="">0QllXqVn1wUiBZ2sPkRzCkQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
