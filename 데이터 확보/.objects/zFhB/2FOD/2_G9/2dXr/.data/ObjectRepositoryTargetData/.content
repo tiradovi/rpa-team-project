@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="fNn5WvIc5kaGJ2zlT0amKw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.youtube.com/watch?v=BBK3D4ixTWY" DesignTimeRectangle="81, 1519, 154, 30" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;ctrl name='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube' role='document' /&gt;&lt;ctrl name='조회수 2,775회 ' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube' role='document' /&gt;&lt;ctrl name='조회수 2,775회 ' role='grouping' automationid='' /&gt;" Guid="7a509f1c-1ff8-4ae3-9866-a67a77f41ca2" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='77만 패튜버가 찐 애정 하는 ‘진짜 가성비’ 반팔티 3가지 - YouTube - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V4" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="025dce8f13eb757952bc1eccc60c3d1c.png" xmlns="">0OWupPvjB80i3PqN3LzkOAw</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">GetText</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

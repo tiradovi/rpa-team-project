@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryScreenData ContentHash="y4gW30nVykO1U4uj2bIpmg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryScreenData.Data>
-    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAjtJREFUWEftllFO20AQhi3HfecIPgJHyEsfmkCxQkC2SWFbUOqitKRN0ufcoLkBvUF6gzy0tSNeOEChC7SQYqfyEaazyyaskyWIsulDxSf9UrSe8T8ez65jPPA3vDpfd2qX5e5eXErrsQPvkqfQGC5D63dxrEZSaItwfQQDYr+88HrBhQu7g3Wo/SrD68sSsCLeJiuZIprxk7pI0wOhxH7x41m687MC1XMf5CLexCXswjI0pQ604seLIvX+EBrYm6fPKTnbAiwCtkUR2A3swCo0h0vXxlwFKlL1sEGrHyonO4BFADkjWMQmL4C1PWt8pfdpcUuk6sH9HlCfVoEVQU4Jb7vKmCspdESaHsrfgvza8S64xwGw99+Yarck3eaM1aOaUznZ5tOuNEU1h8VeI1nKixS9BNS1W8MCuUn1gWOL0P+A3BefmF/99jxkhJ5jRO7sbuUiH/6B9o1DZ0FYZlEEz0Vm5B8KyyyqYC3qe91c6H2U1/hrmUQO0CqcLXZ/s+/VR2tmqOhCJkmnRAFGjyzI63xNRr6oVaMCcBdI6ylfk8mFfioF6FPfX2GTb+HwjddC95OwvQYv0HGAToUbUw/26GBt+v8CDkZnMnAeslQ7gGFFbl6VoEP4cNgFr8c8hJ0aPCS0vgbr8y2Gk2juwr647d2wNMyCGXn01o/PLCaPzrvo3uYjcN+2VQazxD80OszH4H5l06syk8WmnBUssuYAPpXZ9/fwtOxeFYTC31bodfjWuukb/8BMDOMPCtFKyAXjpCQAAAAASUVORK5CYII=" Selector="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" Title="짱구대디랑 - 패션 커뮤니티 : 네이버 카페" Url="https://cafe.naver.com/zzang9daddy">
-      <imageRef attrName="InformativeScreenshot" originalValue="d7977895326796a51438a580671cfca3.jpg" xmlns="">0yjyU2cuDW0e1f97LOUrKQg</imageRef>
-    </TargetApp>
-  </ObjectRepositoryScreenData.Data>
-</ObjectRepositoryScreenData>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryScreenData ContentHash="T9-qhUZ_20KJCbX-8wR0Pg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryScreenData.Data>
-    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='2024ver. 남친룩 월드컵 - YouTube - Chrome' /&gt;" Url="[Nothing]" />
-  </ObjectRepositoryScreenData.Data>
-</ObjectRepositoryScreenData>
