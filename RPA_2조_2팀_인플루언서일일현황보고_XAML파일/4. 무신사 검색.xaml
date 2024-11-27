@@ -1,0 +1,479 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="무신사_검색" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="832.8,5625.6" sap2010:WorkflowViewState.IdRef="무신사_검색_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="무신사_검색" sap:VirtualizedContainerService.HintSize="688,5560.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="datatable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtProductInfo" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="searchItem" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Itemurl" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="Imagecounter" />
+      <Variable x:TypeArguments="sd:DataTable" Name="starlike" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Mudata" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: images" sap:VirtualizedContainerService.HintSize="625.6,785.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="c3e3f9ba-3265-4742-9fa9-0e77af60ae15" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,462.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DirectUIHWND'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="a" KeyModifiers="Ctrl">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4b969db-068f-4fa7-ab7e-2348ffe14416" InformativeScreenshot="fdaeef74460c3aa8c5809eb0a4d88d8a" Selector="&lt;wnd cls='ShellTabWindowClass' title='images' /&gt;&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='셸 폴더 보기' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='항목 보기' cls='DirectUIHWND' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DirectUIHWND'" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="del" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6bb32616-b5a9-495e-a3f9-af0a826844e8" InformativeScreenshot="fdaeef74460c3aa8c5809eb0a4d88d8a" Selector="&lt;wnd cls='ShellTabWindowClass' title='images' /&gt;&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='셸 폴더 보기' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='항목 보기' cls='DirectUIHWND' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1918, 1018" Arguments="c:\users\sgb\onedrive\바탕 화면\인플루언서마케팅현황보고\images" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="dd086aa4a631f73d3a413c73bb0fb969.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='images' /&gt;" Title="images" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,313.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 팀플 마케팅.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,172" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="데이터랩">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,2051.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="512,1853.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[CurrentRow]">
+              <ui:GetRowItem.Value>
+                <OutArgument x:TypeArguments="x:String">[searchItem]</OutArgument>
+              </ui:GetRowItem.Value>
+            </ui:GetRowItem>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: 무신사" sap:VirtualizedContainerService.HintSize="449.6,1544.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="f0ec467c-a67d-489c-8af2-0ba97f89d277" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,1304.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cefca444-2663-4eb4-8794-cb13b13080e5" InformativeScreenshot="eb214434b7e7433c18477be0fb8a0373" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' idx='2' tag='svg' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT'" sap:VirtualizedContainerService.HintSize="353.6,188" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[searchItem + &quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8aaab24-3013-425d-9616-bf727a3ee544" InformativeScreenshot="edfd6fe30c33319950f11623fc8e1828" Selector="&lt;webctrl tag='INPUT' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e062dcfd-9263-40af-91da-3ad06e64d65b" InformativeScreenshot="2d2c8f7902476fcd4bd79acd3a3d391a" Selector="&lt;webctrl aria-role='tab' tag='BUTTON' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3d441ef-8c05-4477-95a6-f7f95c66e782" InformativeScreenshot="093385b9f530024ca9b1362e402350fc" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span&amp;gt;svg' tag='svg' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="75d6fc55-b67c-4baa-ab54-fe67f71a5c52" InformativeScreenshot="881f4b9f3bb957063f977caa74db476f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' tag='svg' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e062dcfd-9263-40af-91da-3ad06e64d65b" InformativeScreenshot="e384452fad24eafe891903925324c580" Selector="&lt;webctrl aaname='1주일' tag='BUTTON' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='제품명'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column7' Name='Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='가격'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='브랜드명'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext' name2='Column7' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="4" ScopeIdentifier="f0ec467c-a67d-489c-8af2-0ba97f89d277" Version="V3">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.musinsa.com/search/musinsa/goods?q=%EB%82%A8%EC%9E%90%EB%B0%98%ED%8C%94%ED%8B%B0&amp;sort=SALE_ONE_DAY&amp;sort_name=%ED%8C%90%EB%A7%A4%EC%88%9C_1%EC%9D%BC" DesignTimeRectangle="559, 122, 750, 9525" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" Guid="12e027c8-928a-418a-93a2-1262b1e56683" InformativeScreenshot="6f09aff203a840ad5cd8a3fa4013fe21.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='남자반팔티 | 무신사 추천 브랜드' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <ui:AppendRange DataTable="[ExtractDataTable]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="353.6,140.8" sap2010:WorkflowViewState.IdRef="AppendRange_3" SheetName="무신사" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 팀플 마케팅.xlsx" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="446, 71, 1070, 1034" BrowserType="Edge" IconBase64="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" InformativeScreenshot="903131d6c147f3f38077f4adebc7fa9f.jpg" Selector="&lt;html app='msedge.exe' title='무신사' /&gt;" Title="무신사" Url="https://www.musinsa.com/main" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:BuildDataTable DataTable="[starlike]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="625.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Stars&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Likes&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="625.6,313.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 팀플 마케팅.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,172" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[Itemurl]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="B2:B21" SheetName="무신사" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Itemurl]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,1776.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="592,1579.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: 새 탭" sap:VirtualizedContainerService.HintSize="529.6,1490.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="408479f3-2818-4f39-8f52-e96582fd2097" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="496,1250.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="stars" />
+                      <Variable x:TypeArguments="x:String" Name="likes" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'editable text'" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[CurrentRow(0).ToString() + &quot;[k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6e3970eb-ee1d-441b-929f-ba0d5e686314" InformativeScreenshot="d52528327e44a81d5d4e7f8e51d4662b" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='새 탭 - 개인 - Microsoft​ Edge' /&gt;&lt;ctrl name='새 탭 - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='앱 바' role='tool bar' /&gt;&lt;ctrl name='주소 표시줄 및 검색 창' role='editable text' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                    <uix:NTakeScreenshot DisplayName="Take Screenshot 'IMG'" FileName="[&quot;C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\images\image &quot; + imageCounter.ToString() + &quot;.jpg&quot;]" FileNameMode="Index" sap:VirtualizedContainerService.HintSize="433.6,265.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="408479f3-2818-4f39-8f52-e96582fd2097" Version="V3">
+                      <uix:NTakeScreenshot.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.musinsa.com/app/goods/1356896" DesignTimeRectangle="726, 235, 417, 500" DesignTimeScaleFactor="0.8333333730697632" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='IMG' parentid='swiper-wrapper-c7e901691040b97210' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' parentid='swiper-wrapper-c7e901691040b97210' type='' class='sc-1jl6n79-4 AqRjD' aaname='지프(JEEP) [190g] M-Logo 그래픽 반팔 티 (JP5TSU173WH)' /&gt;" Guid="344bdfb9-73be-4122-a473-b91a7b38792b" InformativeScreenshot="7994ddc5dee934904972b4bfe2a965be.png" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://www.musinsa.com/app/goods/*' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="0329fb98-1fec-4784-a4d7-e433ae98ee43" CvElementArea="1084, 161, 24, 25" CvType="Icon" DesignTimeRectangle="1086, 162, 22, 22" ElementType="Icon" FullSelectorArgument="&lt;webctrl idx='3' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='svg' class='' aaname='' /&gt;" Guid="8680b896-d59c-4d12-acd1-4a906b3ba1e3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEySURBVEhL7ZSxqoJQHIfv6wiKS3NDQ9DmIgSuTgpCLyC01OAg9ADlIAguLUL4AoLgIIgg+AIuQYuDi79L8l+kU1Z4L5dLHxzw/x08nyCcL/wSn9Db/N1QlmX09BovhXzfB8dxkCQJZVmSfY6nQ+v1GrIsI89zuK6LyWSC0+lEu8MMhoqiwHK5hGmaaNuWLBDHMebzOXa7HZnHPAwdj0eIogjP88j0OZ/P0HUdhmHgcrmQZXM3tNlsun+RpimZ+9i2jcVigSRJyNzCDGma1n1l0zRkhgmCAIIgYL/fk+nDDM1mM1RVRdPzbLdbWJZFU59RQ4fDYbyQ4zgIw5CmPqOGVqvVJ9TxCY0bmk6nUBQFqqreLJ7nu+uGtXd973p1sWCGoih6e9V1Taf0YYZ+gv8WAr4BYfTwUrfoKscAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTakeScreenshot.Target>
+                    </uix:NTakeScreenshot>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[Imagecounter]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Imagecounter + 1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NGetText DisplayName="Get Text '후기 6,220개'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="408479f3-2818-4f39-8f52-e96582fd2097" TextString="[stars]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.musinsa.com/app/goods/1356896" CVScreenId="4b72b089-3a86-40b5-8d6b-cfd13b7c515e" CvTextArea="1041, 460, 85, 21" CvType="AnyWordGroup" DesignTimeRectangle="1010, 441, 150, 62" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='후기 6,222' parentid='root' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='BUTTON' type='' class='sc-1avscmy-2 gbFDOu gtm-catch-click' /&gt;" Guid="32335e15-87c7-4eb2-b05d-3a1fd0104e30" InformativeScreenshot="409f8e60452dafbde09a58ccc3b21fc3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='지프(JEEP) [190g] M-Logo 그래픽 반팔 티 (JP5TSU173WH) - 사이즈 &amp;amp; 후기 | 무신사' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="4b72b089-3a86-40b5-8d6b-cfd13b7c515e" CvTextArea="1215, 460, 35, 21" CvTextArgument="d9" CvType="Text" DesignTimeRectangle="1160, 441, 150, 62" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='문의' parentid='root' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='문의' parentid='root' tag='BUTTON' type='' class='sc-1avscmy-2 gbFDOu gtm-catch-click' check:innerText='문의' /&gt;" Guid="f5065945-cddd-4b1b-ae19-397acadaf1ce" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text '82,020'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="408479f3-2818-4f39-8f52-e96582fd2097" TextString="[likes]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.musinsa.com/app/goods/2574822" CVScreenId="d5b2ffd8-156f-47df-8701-bcc2ff778afb" CvTextArea="581, 988, 46, 16" CvType="AnyWordGroup" DesignTimeRectangle="584, 987, 44, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='82,020' parentid='root' tag='DIV' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='DIV' type='' class='sc-1dtqi8n-5 bdqnul' /&gt;" Guid="500257e1-a38a-4299-966f-2e3c3ae436a6" ImageBase64="" InformativeScreenshot="4ccd161b379f60f99ae1c08b752d3660.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='브렌슨(BRENSON) 미니멀 트레이닝 essential 원턱 반바지 - 사이즈 &amp;amp; 후기 | 무신사' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="d5b2ffd8-156f-47df-8701-bcc2ff778afb" CvElementArea="645, 947, 651, 66" CvTextArea="933, 967, 68, 21" CvTextArgument="70H6t7I" CvType="Button" DesignTimeRectangle="647, 948, 647, 62" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='구매하기' parentid='root' tag='BUTTON' /&gt;" FuzzyAccuracy="0.86" FuzzySelectorArgument="&lt;webctrl aaname='구매하기' parentid='root' tag='BUTTON' type='' class='sc-1loxi6c-0 iNbHNZ gtm-catch-click' check:innerText='구매하기' /&gt;" Guid="3958cb50-d533-4a57-858b-9479df93186f" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{stars,likes}]" DataTable="[starlike]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,212.8" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAQhJREFUWEftl9ENwjAMRDsCIzAKm8AGsAGMwEaMwgiMQP0qTkKy09YkfCDypJNKnFzckLTu0AnYmW6mh+nZUHjuTbOcTdHglmKOkINJnS6mjSlCfTLgdTJpLKvsYIkI0nGOTxIQ3Bhjmcsh49Kdi5oE8GYs+8ux1libczv9ylOcZ20CWsZaOYqBgKup9pg6ioHG9AR6Ar+XAG8wjtz9dS2y7SKdAEaKYSyy7UIxRymAiWKYi2y7UMxRCvCaxghjrkW2XaQTaE1PoCdQnEfHZ6kkq0ElWZiAilIqnm9xNDFHWJRSKis7KuOWK4HX+zdH9IieaFXvzWlxhXl66e9oJfYXnuEHyT8zDCPMjw3PbnWtNQAAAABJRU5ErkJggg==" InformativeScreenshot="4b79837c967840304e41d9051449fe8d.png" Selector="&lt;html app='msedge.exe' url='edge://newtab/' /&gt;" Title="새 탭" Url="edge://newtab/" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:WriteRange AddHeaders="False" DataTable="[starlike]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="625.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="무신사" StartingCell="E2" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 팀플 마케팅.xlsx" />
+  </Sequence>
+</Activity>

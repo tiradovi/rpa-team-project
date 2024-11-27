@@ -1,0 +1,1086 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.extractFilePath_in="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\20240617_charts" this:Main.filePath_in="C:\Users\SGB\Downloads\20240617_charts.zip" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sic="clr-namespace:System.IO.Compression;assembly=System.IO.Compression.ZipFile" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="extractFilePath_in" Type="InArgument(x:String)" />
+    <x:Property Name="filePath_in" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>832.8,9300</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="707.2,9235.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="todayStr" />
+      <Variable x:TypeArguments="x:Int32" Name="index" />
+      <Variable x:TypeArguments="x:String" Name="filePath1" />
+      <Variable x:TypeArguments="x:String" Name="extractPath" />
+      <Variable x:TypeArguments="x:Int32" Name="currentNumber" />
+      <Variable x:TypeArguments="x:Boolean" Name="notloggedin" />
+      <Variable x:TypeArguments="x:String" Name="filePath2" />
+      <Variable x:TypeArguments="x:String" Name="uploadFile" />
+      <Variable x:TypeArguments="x:Boolean" Name="chartDone" />
+      <Variable x:TypeArguments="x:String" Name="filePath3" />
+      <Variable x:TypeArguments="x:Boolean" Name="chart1and2" />
+      <Variable x:TypeArguments="x:Boolean" Name="chart3and4" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[todayStr]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyyMMdd")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[filePath1]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[filePath2]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\naver_datalab_shoppingInsight_category_일간_data_20240614215328.csv</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[uploadFile]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Chr(34) + filePath1 + Chr(34) + " " + Chr(34) + filePath2 + Chr(34)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ChatGPT - Data visualization Bot" sap:VirtualizedContainerService.HintSize="644.8,6484" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="611.2,6235.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="548.8,2067.2" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Finally>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Upload Files'" sap:VirtualizedContainerService.HintSize="333.6,193.6" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot" CVScreenId="5a9804df-3f19-4fc0-8c23-77577ae64c11" CvElementArea="696, 672, 210, 71" CvType="InputBox" DesignTimeRectangle="702, 677, 200, 65" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Upload files.' tag='BUTTON' /&gt;" FuzzyAccuracy="0.59" FuzzySelectorArgument="&lt;webctrl aaname='Upload files.' tag='BUTTON' type='' class='relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-token-main-surface-secondary' check:innerText='Upload files.' /&gt;" Guid="cb0cfc51-36f0-42b5-a95e-d7c3eab83882" InformativeScreenshot="6e0eaac4aafad43c185c539682e79ebd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="5a9804df-3f19-4fc0-8c23-77577ae64c11" CvElementArea="696, 672, 210, 71" CvType="InputBox" DesignTimeRectangle="717, 693, 106, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Upload files.' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Upload files.' parentid='__next' tag='DIV' type='' class='line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word' check:innerText='Upload files.' /&gt;" Guid="7ebdb14b-f34a-4ba9-a057-df8d3f4a1edd" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                  <uix:NClick.VerifyOptions>
+                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                      <uix:VerifyExecutionOptions.Retry>
+                        <InArgument x:TypeArguments="x:Boolean" />
+                      </uix:VerifyExecutionOptions.Retry>
+                      <uix:VerifyExecutionOptions.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:VerifyExecutionOptions.Timeout>
+                    </uix:VerifyExecutionOptions>
+                  </uix:NClick.VerifyOptions>
+                </uix:NClick>
+              </TryCatch.Finally>
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="512,1827.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Element Exists 'BUTTON'" Exists="[notloggedin]" sap:VirtualizedContainerService.HintSize="449.6,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="880c03ae-7f7e-469e-94ae-77c01c2acb33" InformativeScreenshot="b17c7a100f568bf5874c35ec76aadbb9" Selector="&lt;webctrl aaname='회원 가입해 채팅하세요' tag='BUTTON' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If Condition="[notloggedin = true]" sap:VirtualizedContainerService.HintSize="449.6,1597.6" sap2010:WorkflowViewState.IdRef="If_7">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,1329.6" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '회원 가입해 채팅하세요'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot" CVScreenId="77f500b2-d4ee-4917-8422-ef7a6ee6d62b" CvElementArea="833, 701, 269, 63" CvTextArea="859, 721, 216, 22" CvTextArgument="01€ 7}goH A5o]A]£" CvType="Button" DesignTimeRectangle="836, 705, 266, 57" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='회원 가입해 채팅하세요' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='회원 가입해 채팅하세요' tag='BUTTON' type='' class='btn relative btn-primary btn-giant' check:innerText='회원 가입해 채팅하세요' /&gt;" Guid="f40f7ab0-aa16-4a08-82b9-c41eaa57df7c" InformativeScreenshot="4f4b766250dd839f39ec8407a0f3cb13.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="77f500b2-d4ee-4917-8422-ef7a6ee6d62b" CvElementArea="833, 701, 269, 63" CvTextArea="859, 721, 216, 22" CvTextArgument="01€ 7}goH A5o]A]£" CvType="Button" DesignTimeRectangle="862, 718, 214, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='회원 가입해 채팅하세요' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='회원 가입해 채팅하세요' parentid='__next' tag='DIV' type='' class='flex items-center justify-center' check:innerText='회원 가입해 채팅하세요' /&gt;" Guid="f0da4367-c567-4c09-9887-a5ece37b0edb" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '로그인'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_40" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://auth.openai.com/authorize?client_id=TdJIcbe16WoTHtN95nyywh5E4yOo6ItG&amp;scope=openid%20email%20profile%20offline_access%20model.request%20model.read%20organization.read%20organization.write&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fchatgpt.com%2Fapi%2Fauth%2Fcallback%2Flogin-web&amp;audience=https%3A%2F%2Fapi.openai.com%2Fv1&amp;device_id=c6ac6edf-7022-4525-b442-26b5baa8cdfd&amp;prompt=login&amp;screen_hint=signup&amp;ext-statsig-tier=production&amp;ext-oai-did=c6ac6edf-7022-4525-b442-26b5baa8cdfd&amp;state=IqTmWzSNXbrpEdTBnMHgqfcWOUd1_VRd7V3obDEcGn0&amp;code_challenge=cxscAkBi0xWrzYtga-yMq2gxrXcTOfMi16gM6_zkzYY&amp;code_challenge_method=S256" CVScreenId="1799ac02-5eb9-4782-a4a1-30a79f2d2895" CvTextArea="1030, 756, 53, 21" CvTextArgument="PiQ!" CvType="Text" DesignTimeRectangle="1026, 754, 64, 31" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Sign Up - ChatGPT' role='document' /&gt;&lt;ctrl name='로그인' role='link' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sign Up - ChatGPT' role='document' /&gt;&lt;ctrl name='로그인' role='link' automationid='' check:text='로그인' /&gt;" Guid="0206764c-e4e7-464e-ac97-54e0d7935b91" InformativeScreenshot="cda8c0220fcfdb02a092411d4885c173.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Sign Up - ChatGPT - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="AA" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '이메일 주소*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="[&quot;wrbbbvm@huanqiubus.com&quot; + &quot;[k(enter)]&quot;]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://auth.openai.com/authorize?client_id=TdJIcbe16WoTHtN95nyywh5E4yOo6ItG&amp;scope=openid+email+profile+offline_access+model.request+model.read+organization.read+organization.write&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fchatgpt.com%2Fapi%2Fauth%2Fcallback%2Flogin-web&amp;audience=https%3A%2F%2Fapi.openai.com%2Fv1&amp;device_id=c6ac6edf-7022-4525-b442-26b5baa8cdfd&amp;prompt=login&amp;ext-statsig-tier=production&amp;ext-oai-did=c6ac6edf-7022-4525-b442-26b5baa8cdfd&amp;state=sBfEtyakta9wxIxBtN8eY4ZHvb5AKkjlGwkjoj3vptw&amp;code_challenge=Nv9rexiZ9V3fPVcx6JyNzaSH4QM2QxNAgxAu71YlAt0&amp;code_challenge_method=S256" CVScreenId="48e94b7a-b587-420b-9d59-8c1b41202367" CvElementArea="755, 568, 406, 69" CvType="InputBox" DesignTimeRectangle="759, 635, 400, 65" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='email-input' tag='INPUT' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl id='email-input' tag='INPUT' type='email' class='email-input ' aaname='이메일 주소*' /&gt;" Guid="1fbca27b-c0d3-453d-8cf8-2c444a8a91f7" InformativeScreenshot="3927ad284e62e2fd14b0581ba91441b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - ChatGPT' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="48e94b7a-b587-420b-9d59-8c1b41202367" CvElementArea="755, 568, 406, 69" CvType="InputBox" DesignTimeRectangle="779, 651, 128, 33" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzyAccuracy="0.62" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='email-label ' aaname='이메일 주소*' check:innerText='이메일 주소*' /&gt;" Guid="1e5f6486-6e5e-4249-aafa-cd0e774a12f7" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_26" IsPassword="True" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="MBXw4425fNUw" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://auth0.openai.com/u/login/password?state=hKFo2SB5N1NCQS1oMkNYWWhjVVlWandXdTJSQ1ZpbXRSbnBJdqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDRiV2czU08yOS05VGRTQmpOdElzSDlWLWFCMHAxVWhNo2NpZNkgVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEc" CVScreenId="dba1d5d2-cd37-463a-9704-9083b57a15ac" CvElementArea="756, 652, 404, 71" CvType="InputBox" DesignTimeRectangle="760, 656, 343, 65" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='input ce00bcc88 cfc20964e' aaname='                             비밀번호*                           ' /&gt;" Guid="296a2893-b2a7-45c7-8789-39429dbabc03" InformativeScreenshot="2a92d7056285fdf4bfa4f52032e95fdf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='auth0.openai.com/u/login/password?state=hKFo2SB5N1NCQS1oMkNYWWhjVVlWandXdTJSQ1ZpbXRSbnBJdqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDRiV2czU08yOS05VGRTQmpOdElzSDlWLWFCMHAxVWhNo2NpZNkgVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEc' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '계속'" sap:VirtualizedContainerService.HintSize="353.6,216.8" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://auth0.openai.com/u/login/password?state=hKFo2SB5N1NCQS1oMkNYWWhjVVlWandXdTJSQ1ZpbXRSbnBJdqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDRiV2czU08yOS05VGRTQmpOdElzSDlWLWFCMHAxVWhNo2NpZNkgVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEc" CVScreenId="dba1d5d2-cd37-463a-9704-9083b57a15ac" CvElementArea="758, 794, 401, 69" CvTextArea="935, 818, 43, 22" CvTextArgument="A14" CvType="Button" DesignTimeRectangle="759, 798, 400, 65" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='c91192a5a c50deed59 cdb4306d0 c9ec81755 _button-login-password' aaname='계속' check:innerText='계속' /&gt;" Guid="ddc0117b-ee9b-4d8f-a90b-ae5f87374f30" InformativeScreenshot="bdad5d5f667363c4818a00e50ef3879b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='auth0.openai.com/u/login/password?state=hKFo2SB5N1NCQS1oMkNYWWhjVVlWandXdTJSQ1ZpbXRSbnBJdqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDRiV2czU08yOS05VGRTQmpOdElzSDlWLWFCMHAxVWhNo2NpZNkgVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEc' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </TryCatch.Try>
+            </TryCatch>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_43" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot" DesignTimeRectangle="667, 937, 40, 40" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' idx='2' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='flex items-center justify-center text-token-text-primary juice:h-8 juice:w-8 dark:text-white juice:rounded-full focus-visible:outline-black dark:focus-visible:outline-white juice:mb-1 juice:ml-1.5' tag='BUTTON' aaname='' /&gt;" Guid="3d42ca3b-5e53-4210-b0ce-54d04307cb2f" InformativeScreenshot="b2f6ccbee3283ab9e918d0bb14409858.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '컴퓨터에서 업로드'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_44" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot" CVScreenId="99cea61e-2e62-4578-816b-d6b6abcb3c98" CvTextArea="721, 880, 147, 22" CvTextArgument="UFE[0['A gac" CvType="Text" DesignTimeRectangle="670, 865, 403, 55" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl aaname='컴퓨터에서 업로드' aria-role='menuitem' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='컴퓨터에서 업로드' aria-role='menuitem' tag='DIV' type='' class='flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 radix-disabled:pointer-events-none radix-disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] dark:hover:bg-token-main-surface-secondary dark:focus-visible:bg-token-main-surface-secondary rounded-md my-0 px-3 mx-2 radix-state-open:bg-[#f5f5f5] dark:radix-state-open:bg-token-main-surface-secondary gap-2.5 py-3' check:innerText='컴퓨터에서 업로드' /&gt;" Guid="08eee59e-4b22-40fa-93d2-66590e3d6bd7" InformativeScreenshot="fab4b11d93e0f629916aa8d6a03d55fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '파일 이름(&amp;N)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_27" InteractionMode="HardwareEvents" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="[uploadFile]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot" CVScreenId="bcc794a1-195a-4230-a943-3195f8c458ca" CvElementArea="274, 926, 1367, 32" CvType="InputBox" DesignTimeRectangle="278, 933, 1336, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="de654665-47af-4228-a20e-8a23413b97ea" InformativeScreenshot="e9040af473a8373bcb290b5c70fdad04.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="bcc794a1-195a-4230-a943-3195f8c458ca" CvTextArea="175, 932, 91, 18" CvTextArgument="Ilg! 0I5(N):" CvType="Text" DesignTimeRectangle="177, 933, 89, 20" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' check:text='파일 이름(&amp;amp;N):' /&gt;" Guid="ed9da576-5b08-4a72-86a3-568c2c8a44f3" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_21" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_45" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/3dfa85af-d4ad-47ab-8d12-60bb758d6118" CVScreenId="33b405d5-19d8-4caf-990e-5bc365996807" CvElementArea="1651, 963, 113, 35" CvTextArea="1680, 970, 53, 20" CvTextArgument="g7l(o)" CvType="Button" DesignTimeRectangle="1653, 965, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='열기(&amp;amp;O)' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='열기(&amp;amp;O)' check:text='unchecked' /&gt;" Guid="52ea1e93-0760-4742-845a-00db27b6c94c" InformativeScreenshot="c5c0cad32b888cf3de10a1f81c544911.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='열기' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_22" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA prompt-textarea'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="%[k(enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/36749401-2fb5-4899-b816-fc95aa151e05" CVScreenId="711c1cf6-6252-4ccf-b3f8-13d02a450fcc" CvElementArea="650, 922, 961, 66" CvType="InputBox" DesignTimeRectangle="717, 932, 832, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52' placeholder='메시지 Data visualization Bot' aaname='' /&gt;" Guid="a8e11cf8-6e84-4a1f-8c26-ecf3908f3972" InformativeScreenshot="87ca57a9e27c431f86629e823e73046b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="711c1cf6-6252-4ccf-b3f8-13d02a450fcc" CvTextArea="714, 943, 267, 23" CvTextArgument="D[]/A]X] Data visualization Bot" CvType="Text" DesignTimeRectangle="659, 932, 945, 50" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='__next' tag='DIV' /&gt;" FuzzyAccuracy="0.6" FuzzySelectorArgument="&lt;webctrl type='' class='flex items-end gap-1.5 md:gap-2' parentid='__next' tag='DIV' aaname='' /&gt;" Guid="76b382e3-a00d-466d-8099-08806acc0356" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_23" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA prompt-textarea'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="Make sure to make charts 1 and 2 according to the guidelines." Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/edd6f348-981c-4a47-afc7-3cc69430e62f" CVScreenId="c061bbeb-ab5a-45a8-a97a-8487b0128258" CvElementArea="651, 922, 961, 67" CvType="InputBox" DesignTimeRectangle="717, 932, 832, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52' placeholder='메시지 Data visualization Bot' aaname='' /&gt;" Guid="a86d8b32-780d-4fc1-9a14-7c6c72e8a0b6" InformativeScreenshot="ad95d38ec12b0e96d39905642f80b586.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c061bbeb-ab5a-45a8-a97a-8487b0128258" CvTextArea="715, 945, 265, 22" CvTextArgument="C1lAJX] Data visualization Bot" CvType="Text" DesignTimeRectangle="659, 932, 945, 50" ElementType="InputBox" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='__next' tag='DIV' /&gt;" FuzzyAccuracy="0.6" FuzzySelectorArgument="&lt;webctrl type='' class='flex items-end gap-1.5 md:gap-2' parentid='__next' tag='DIV' aaname='' /&gt;" Guid="77cbc6a9-7e6d-44bc-a9b1-f4ed83fae729" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears" Retry="False">
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_49" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/f8c7ab84-b007-4893-81b0-abab5c60e769" DesignTimeRectangle="1559, 937, 40, 40" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' parentid='__next' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='svg' class='icon-2xl' aaname='' /&gt;" Guid="5abaa755-1b35-439a-88e2-2caa188b86aa" InformativeScreenshot="548f42d8d21c4dc984713fea7052fbaa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="678, 944, 17, 25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='__next' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='path' class='' aaname='' /&gt;" Guid="5cd8dc58-c0c4-45ae-bffc-4a268da01cd5" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Delay Duration="00:03:00" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_27" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TEXTAREA prompt-textarea'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/8005e558-af3d-4bbf-8ca7-5d27b2a28443" CVScreenId="bbef1fc6-ad79-4860-b8b1-e8be72106c04" CvElementArea="651, 922, 962, 66" CvType="InputBox" DesignTimeRectangle="717, 932, 832, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52' placeholder='메시지 Data visualization Bot' aaname='' /&gt;" Guid="3ec7dc99-33d2-41bb-a1cd-a601553eab74" InformativeScreenshot="4015ebd1e899aaaffb9f446bb8f29543.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="678, 944, 17, 25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='__next' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='path' class='' aaname='' /&gt;" Guid="b9e13e00-00b9-4af8-89e5-a55173df4fc1" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA prompt-textarea'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_34" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="Make sure to make charts 3 and 4 according to the guidelines. Don't give me the empty charts." Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/a77f25e1-8399-442d-8c07-b141d3ff80ba" CVScreenId="25d7a62a-5771-402a-8edc-060f07548278" CvElementArea="651, 922, 961, 67" CvType="InputBox" DesignTimeRectangle="717, 932, 832, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52' placeholder='메시지 Data visualization Bot' aaname='' /&gt;" Guid="8b5a2032-a89f-4a13-8cf2-4d3fd96c0696" InformativeScreenshot="5ecee40709e935713809a72dca2cff5c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears" Retry="False">
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_50" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/f8c7ab84-b007-4893-81b0-abab5c60e769" DesignTimeRectangle="1559, 937, 40, 40" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' parentid='__next' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='svg' class='icon-2xl' aaname='' /&gt;" Guid="5abaa755-1b35-439a-88e2-2caa188b86aa" InformativeScreenshot="548f42d8d21c4dc984713fea7052fbaa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="678, 944, 17, 25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='__next' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='path' class='' aaname='' /&gt;" Guid="5cd8dc58-c0c4-45ae-bffc-4a268da01cd5" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Delay Duration="00:03:00" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_28" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TEXTAREA prompt-textarea'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_48" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/8005e558-af3d-4bbf-8ca7-5d27b2a28443" CVScreenId="bbef1fc6-ad79-4860-b8b1-e8be72106c04" CvElementArea="651, 922, 962, 66" CvType="InputBox" DesignTimeRectangle="717, 932, 832, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52' placeholder='메시지 Data visualization Bot' aaname='' /&gt;" Guid="3ec7dc99-33d2-41bb-a1cd-a601553eab74" InformativeScreenshot="4015ebd1e899aaaffb9f446bb8f29543.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="678, 944, 17, 25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='__next' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='path' class='' aaname='' /&gt;" Guid="b9e13e00-00b9-4af8-89e5-a55173df4fc1" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA prompt-textarea'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="548.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_35" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Text="[&quot;Charts 1 and 2, 3, 4 are stored as static charts. Compressed the finished charts with the name of yyyyMMdd_charts so they can be downloaded. Today is &quot; + todayStr]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/a77f25e1-8399-442d-8c07-b141d3ff80ba" CVScreenId="25d7a62a-5771-402a-8edc-060f07548278" CvElementArea="651, 922, 961, 67" CvType="InputBox" DesignTimeRectangle="717, 932, 832, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 resize-none border-0 bg-transparent px-0 text-token-text-primary focus:ring-0 focus-visible:ring-0 max-h-[25dvh] max-h-52' placeholder='메시지 Data visualization Bot' aaname='' /&gt;" Guid="dc72e7b8-f733-4ac5-9dc0-7855ead208f6" InformativeScreenshot="884c21ff3e1438416ca38d14a9db40a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears" Retry="False">
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="548.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b34822de-4da0-4840-9a19-ae8f75bf9a05" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot/c/f8c7ab84-b007-4893-81b0-abab5c60e769" DesignTimeRectangle="1559, 937, 40, 40" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' parentid='__next' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='svg' class='icon-2xl' aaname='' /&gt;" Guid="5abaa755-1b35-439a-88e2-2caa188b86aa" InformativeScreenshot="548f42d8d21c4dc984713fea7052fbaa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="678, 944, 17, 25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' parentid='__next' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='path' class='' aaname='' /&gt;" Guid="5cd8dc58-c0c4-45ae-bffc-4a268da01cd5" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Delay Duration="00:03:00" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_26" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,268" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'A'" sap:VirtualizedContainerService.HintSize="353.6,179.2" sap2010:WorkflowViewState.IdRef="TextExists_4" Occurrence="1" Result="[chartDone]" Text="Download_">
+                    <ui:TextExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6e7d1b43-53bb-48e8-8fbf-466b5b4fbc59" InformativeScreenshot="7fd1aa5619f6c2cf31080444a54df1a2" Selector="&lt;webctrl aaname='Download 20240616_charts.zip' class='cursor-pointer' tag='A' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:TextExists.Target>
+                  </ui:TextExists>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548.8,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="883.2,667.2" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[chartDone = True]" sap:VirtualizedContainerService.HintSize="820.8,578.4" sap2010:WorkflowViewState.IdRef="If_8">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="787.2,312" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="724.8,223.2" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                          <ui:AnchorBase.Action>
+                            <ActivityAction x:TypeArguments="ui:Anchor">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                              </ActivityAction.Argument>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c509a30-872d-4652-b523-e62467c7114a" InformativeScreenshot="383076770c71945608240756a5456655" Selector="&lt;webctrl aaname='Download 20240617_charts.zip' class='cursor-pointer' tag='A' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </ActivityAction>
+                          </ui:AnchorBase.Action>
+                          <ui:AnchorBase.AnchorProvider>
+                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                              <ui:WaitUiElementAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33114d3e-5d9f-4c62-9abf-45577f03441b" InformativeScreenshot="ffcf3ac52a0c3c21a6f8630f5ce378bf" Selector="&lt;webctrl class='icon-md-heavy' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;span&amp;gt;svg' idx='11' parentid='__next' tag='svg' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:WaitUiElementAppear.Target>
+                            </ui:WaitUiElementAppear>
+                          </ui:AnchorBase.AnchorProvider>
+                        </ui:AnchorBase>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsSAAALEgHS3X78AAACtElEQVRYR82XwW3CQBBFaQCJAkDKHSqADuiAG0c64BhOdEAHdEABSFAAggYiOqCDjd/aX5msZ41BCuRLK8x6PfPmz9rgjhRC6BXjsxj7YvyVTsWYVyl/VEx+FOOLFS8SuT6q9BHglcklcvZIPo9f36MVAPSltY7HY1gul2E2m8Wx3W7D9Xqtzj6sPQCtRJLpdBq63W4YDAZhNBrFT74Ph8MI8oxaAdxut5iEhOv1On6XLpdLhAFkMpnEY0DbOtMKAMtJsNvtqplSgOgccCSmLYDImfP5XK321QhAgs1mEwMtFotqthTz/X4/JuKcdQWxV3CDNU1OZAFsAgbfEZaPx+M4R8UkklIIEhODdTm5APSPBFhJzznWJqNaKrObjkTMs45PW7FalMJJLgCWk4SLqDAF0DHnAaRKEgmC65lH7BvmcM5TDUDVy9ocAIFJxDmSS1TPRhSIHLCtsqoB6ALJA5BDnGOe49R6zXMto3ULCISlkgfAsAFt1VhvQbSHtIlT1QBYyAUKQu9SAB1bkUhwOGTXcBdQlOdCDYBFJLR9BUo26ymXCgBtPNbZIg6Hw68irGoASPtAARHBFNjCIaBpgdbzaQFUlI0nuQCynYGd9hYiKC7IZj2w9DuBcgDePnABCCxi7WSqV0AkN3hYsVFZmwNQPO9WbASgcugVkIH92E3FtqIcAEO3rafGFiggIpDdA4BJakMKQCEk59i20coFQLp1rO2psNT+MGmtABg45VkvZQH4HScAFaQQfCch57GWSq1kOc5YpzxlARDPe21CEtIC/dnw/h0hknI+hcqpEQBRLT0HABgBsBGtM4Do+cGatroL4Mn2GCi5JLB7tlsB8NSrGNVjNwkZVN+02TI6AbAqj9+iOQC8lL7l1ax6M/wHL6dSMcl74kOvag+K/UbLe2XGTucbnVBY94fcQl8AAAAASUVORK5CYII=" InformativeScreenshot="a93ef7da3c70a6bf3d129f85d7ef8cce.jpg" Selector="&lt;html app='chrome.exe' title='ChatGPT - Data visualization Bot' /&gt;" Title="ChatGPT - Data visualization Bot" Url="https://chatgpt.com/g/g-JaRNhoDC1-data-visualization-bot" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[filePath3]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["C:\Users\SGB\Downloads\" + todayStr + "_charts.zip"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="644.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[extractFilePath_in]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고" + todayStr + "_charts"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="644.8,397.6" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,247.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="353.6,158.4" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="ExtractToDirectory" TargetType="sic:ZipFile">
+            <InArgument x:TypeArguments="x:String">[filePath1]</InArgument>
+            <InArgument x:TypeArguments="x:String">[extractFilePath_in]</InArgument>
+          </InvokeMethod>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="644.8,1583.2" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="512,1441.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="449.6,1352.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" UseTemplate="True" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+            <ueab:ExcelApplicationCard.Body>
+              <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,1036.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '일자'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_10" InScope="[Excel]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="f878edbf-aa55-4f2c-8464-7f24c72a1cdb" CvElementArea="260, 376, 630, 59" CvTextArea="488, 397, 174, 17" CvTextArgument="984OA 4lg gg¥1A" CvType="Button" DesignTimeRectangle="262, 377, 628, 58" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia name='직사각형 3' role='textbox' /&gt;" FuzzySelectorArgument="&lt;uia name='직사각형 3' role='textbox' automationid='' /&gt;" Guid="eff55fa5-3fb1-4a08-ab84-3932bb000961" InformativeScreenshot="02eed86dcec867aaaf5c917de2a62c82.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 인플루언서 현황 일일보고 - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="f878edbf-aa55-4f2c-8464-7f24c72a1cdb" CvTextArea="193, 453, 25, 15" CvTextArgument="gx}" CvType="Text" DesignTimeRectangle="149, 454, 114, 19" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='눈금' /&gt;&lt;uia automationid='C6' cls='XLSpreadsheetCell' name='C6' tableCol='3' tableRow='6' /&gt;" Guid="26989ecd-7f67-42aa-bf0e-02fb55a43078" SearchSteps="Selector, FuzzySelector, CV">
+                              <uix:Target.FuzzySelectorArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='눈금' /&gt;&lt;uia automationid='C6' cls='XLSpreadsheetCell' name='C6' role='항목' check:text='일자' /&gt;</Literal>
+                                </InArgument>
+                              </uix:Target.FuzzySelectorArgument>
+                            </uix:Target>
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey '항목  C3'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="s" KeyModifiers="Ctrl">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="17fc7fb6-28d9-4412-bc06-b06dd5c17561" InformativeScreenshot="726b2e7e963ecf0bdc6442c4067f6612" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 인플루언서 현황 일일보고 - Excel' /&gt;&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='눈금' /&gt;&lt;uia automationid='C11' cls='XLSpreadsheetCell' name='C11' tableCol='3' tableRow='11' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="353.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey '항목  T4'" sap:VirtualizedContainerService.HintSize="353.6,186.4" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="f4" KeyModifiers="Alt" SpecialKey="False">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd56b1f2-c49d-4c7f-8bf3-7be740e49e8e" InformativeScreenshot="726b2e7e963ecf0bdc6442c4067f6612" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 인플루언서 현황 일일보고 - Excel' /&gt;&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='눈금' /&gt;&lt;uia automationid='C11' cls='XLSpreadsheetCell' name='C11' tableCol='3' tableRow='11' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="[currentNumber]" DisplayName="For Each currentNumber" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Enumerable.Range(1, 5)]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="x:Int32">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Int32" Name="currentNumber" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="512,2090.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: RPA 팀플 마케팅 - Excel" sap:VirtualizedContainerService.HintSize="449.6,2001.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Version="V2">
+                                        <uix:NApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,1687.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '일간 변화 추이 막대 (%)'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable CVScreenId="0339df94-404b-450b-986b-dfa152fdfffe" CvTextArea="153, 400, 38, 12" CvTextArgument="Chart 1" CvType="Text" DesignTimeRectangle="148, 396, 401, 190" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia name='직사각형 1' role='textbox' /&gt;" FuzzySelectorArgument="&lt;uia name='직사각형 1' role='textbox' automationid='' /&gt;" Guid="0438978a-8e35-49ac-83b4-d56e05f99a28" InformativeScreenshot="bb819d8e05f6bbed3d367a7ed9ae0902.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 팀플 마케팅 - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="0339df94-404b-450b-986b-dfa152fdfffe" CvTextArea="150, 377, 53, 15" CvTextArgument="S0 Es" CvType="Text" DesignTimeRectangle="149, 378, 57, 19" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='눈금' /&gt;&lt;uia automationid='C19' cls='XLSpreadsheetCell' name='C19' tableCol='3' tableRow='2' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='눈금' /&gt;&lt;uia automationid='C19' cls='XLSpreadsheetCell' name='C19' role='항목' check:text='일간 변화 추이 막대 (%)' /&gt;" Guid="0767baf8-f2a8-42ce-87c6-c0196f3d098e" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '도움말'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable CVScreenId="5152fa8a-8f64-4f05-839b-ba640c5aecbf" CvTextArea="753, 78, 73, 20" CvTextArgument="59 AA" CvType="Text" DesignTimeRectangle="743, 69, 96, 38" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIPanViewer' name='리본 메뉴 탭' /&gt;&lt;uia cls='NetUITabGroup' name='그리기 도구' /&gt;&lt;uia cls='NetUIRibbonTab' name='도형 서식' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIPanViewer' name='리본 메뉴 탭' /&gt;&lt;uia cls='NetUITabGroup' name='그리기 도구' /&gt;&lt;uia cls='NetUIRibbonTab' name='도형 서식' role='탭 항목' automationid='' check:fulltext='도형 서식' /&gt;" Guid="be11d551-ca93-4027-9719-edee1077b30b" InformativeScreenshot="516f2e5a65adad0e85702787b01667c8.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 팀플 마케팅 - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="5152fa8a-8f64-4f05-839b-ba640c5aecbf" CvTextArea="679, 78, 51, 20" CvTextArgument="5&amp;Q" CvType="Text" DesignTimeRectangle="669, 69, 73, 38" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIPanViewer' name='리본 메뉴 탭' /&gt;&lt;uia automationid='HelpTab' cls='NetUIRibbonTab' name='도움말' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIPanViewer' name='리본 메뉴 탭' /&gt;&lt;uia automationid='HelpTab' cls='NetUIRibbonTab' name='도움말' role='탭 항목' check:fulltext='도움말' /&gt;" Guid="c6938bbf-5e65-4010-b449-6e6e0d8c881c" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '추가 옵션'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable CVScreenId="14575b73-dca9-4189-b4a9-e00bd61ae845" CvElementArea="716, 115, 19, 19" CvTextArea="636, 116, 80, 17" CvTextArgument="5g *H£7]" CvType="ArrowButton" DesignTimeRectangle="637, 111, 101, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIOrderedGroup' name='도형 서식' /&gt;&lt;uia cls='NetUIChunk' name='도형 스타일' /&gt;&lt;uia automationid='ShapeFillColorPicker_Dropdown' cls='NetUIRibbonButton' name='추가 옵션' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIOrderedGroup' name='도형 서식' /&gt;&lt;uia cls='NetUIChunk' name='도형 스타일' /&gt;&lt;uia automationid='ShapeFillColorPicker_Dropdown' cls='NetUIRibbonButton' name='추가 옵션' role='메뉴 항목' check:fulltext='추가 옵션' /&gt;" Guid="37415d9b-8c72-4a4f-bc7d-80ff3c7389f8" InformativeScreenshot="2794a8d6a137787649ab58724bebdb01.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 팀플 마케팅 - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '다른 채우기 색...'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable DesignTimeRectangle="609, 545, 207, 36" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIOrderedGroup' name='도형 서식' /&gt;&lt;uia cls='NetUIChunk' name='도형 스타일' /&gt;&lt;uia cls='NetUITWMenuItemGroup' name=' ' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='그림...' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIOrderedGroup' name='도형 서식' /&gt;&lt;uia cls='NetUIChunk' name='도형 스타일' /&gt;&lt;uia cls='NetUITWMenuItemGroup' name=' ' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='그림...' role='메뉴 항목' automationid='' check:fulltext='그림...' /&gt;" Guid="ed4edba1-6864-418a-a813-37e73de71e93" InformativeScreenshot="01a9d6b30db4770f31e18d70b84c16a1.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 팀플 마케팅 - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="609, 509, 207, 36" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIOrderedGroup' name='도형 서식' /&gt;&lt;uia cls='NetUIChunk' name='도형 스타일' /&gt;&lt;uia cls='NetUITWMenuItemGroup' name=' ' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='다른 채우기 색...' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon 도구 모음' /&gt;&lt;uia cls='NetUIOrderedGroup' name='도형 서식' /&gt;&lt;uia cls='NetUIChunk' name='도형 스타일' /&gt;&lt;uia cls='NetUITWMenuItemGroup' name=' ' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='다른 채우기 색...' role='메뉴 항목' automationid='' check:fulltext='다른 채우기 색...' /&gt;" Guid="808452db-ab06-4ddd-a0ac-afe35c4d4ddf" SearchSteps="Selector, FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DirectUIHWND'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                                <ui:SendHotkey.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="877f7049-57b5-4e90-b68f-1d1c230e1a8a" InformativeScreenshot="1a96db2744303577be572d46f5181d88" Selector="&lt;wnd app='excel.exe' cls='NUIDialog' title='그림 삽입' /&gt;&lt;uia automationid='InsertPicture' cls='NetUISimpleButton' name='파일에서&amp;#xD;&amp;#xA;컴퓨터 또는 로컬 네트워크에서 파일 찾아보기' /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:SendHotkey.Target>
+                                              </ui:SendHotkey>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '파일 이름(&amp;N)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Text="C:\Users\SGB\Downloads\0615_charts\Chart 1.png" Version="V3">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable CVScreenId="2e7f6875-bb31-4842-9c6c-fab5a8efd6e6" CvElementArea="275, 506, 405, 32" CvType="InputBox" DesignTimeRectangle="278, 513, 376, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="51d28a19-a1dd-4408-8d99-4ebe004359dc" InformativeScreenshot="4aef6034b99c5d9c73369988d3b4c1ce.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='#32770' title='그림 삽입' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="2e7f6875-bb31-4842-9c6c-fab5a8efd6e6" CvTextArea="210, 511, 56, 21" CvTextArgument="0I5(N):" CvType="Text" DesignTimeRectangle="177, 513, 89, 20" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='파일 이름(&amp;amp;N):' check:text='파일 이름(&amp;amp;N):' /&gt;" Guid="ed64c583-6c77-4d2f-9d77-b5b80e3ecc70" SearchSteps="Selector, FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                                <uix:NTypeInto.VerifyOptions>
+                                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                  </uix:VerifyExecutionTypeIntoOptions>
+                                                </uix:NTypeInto.VerifyOptions>
+                                              </uix:NTypeInto>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7490a632-eeb0-4a66-9f34-c29a7ac676b4" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable CVScreenId="f72fa589-2f53-4569-838d-67bcd2897ce8" CvElementArea="691, 543, 112, 34" CvType="InputBox" DesignTimeRectangle="693, 545, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='삽입(&amp;amp;S)' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='삽입(&amp;amp;S)' check:text='unchecked' /&gt;" Guid="7c37dd68-438c-42d9-8e83-33c7b5e2b23f" InformativeScreenshot="2edb44dc53cbf12c09c23baa5cfe48d9.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='#32770' title='그림 삽입' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                </uix:NClick.Target>
+                                                <uix:NClick.VerifyOptions>
+                                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionOptions.Retry>
+                                                    <uix:VerifyExecutionOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionOptions.Timeout>
+                                                  </uix:VerifyExecutionOptions>
+                                                </uix:NClick.VerifyOptions>
+                                              </uix:NClick>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </uix:NApplicationCard.Body>
+                                        <uix:NApplicationCard.TargetApp>
+                                          <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="c:\users\sgb\onedrive\바탕 화면\rpa 팀플 마케팅.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQdSURBVFhH7dhLTFRXHMdxMLWRODN35sIw4EIeLmyqUWEERECeUgSKgBhta7tpqbysCsqz5SnPjQsFDbHWYknVmKDR+GxtGklXXViWbZOWRcVVbeLC5a//c+5rZrgzXOlxFqQn+SYMBP6fnHvuWRCxUlYktSrMWV6RSVO1N5Muf4rl5J3tW16Pe2+o85dcUWaDrWY63GI0+w2FEHpJZoOtZjbYajTbphBCL6fZYKuZDbYazZYVQuj1PzBYNHuFABO//Bghu6iU9HUtkqYEA+PHqmbiR6sQP1qJuJG9SsMV8LCG3uXFDpYrnSqD+1Qp3AOsPYjpZ5Ugpu8dRFOekQoFOkVQYUAOU3GE8sctAetXYNG9xdRuyD27IR3PgrMjF87P83m+u/mqcaD5rqmwwTI/XAzH+cD6GKyYw+SeIri6iyAdy4LUugvOrjxBQD9YqMfJYCUqTNk1X5iruxCuLwrgaMqE1JINZ6cgoGd4MeyjawMY+3Ga+gZ5k40KToV13juH0R+m0Hl3QsUpMCeLQI6GDEjNIoGB54zKn2yCtmb//EXfsQ+v9KrfBTrujBNMxRHE2cXKg71eMDDYOfv2yQOVAlRcOsEf5/zzZ/zz7B9PVJiGy4NEIKkzVzzQ/5ypZ412LHm0Gv+8fKGDGmfG+Nds5YzX6jAGYTCJ3lypfRfsdemCgQEw3xeAnTNtadiJn64rML5rBozXliMeyGFBr41CzC38zmFszT9fQMJAuf44dRzBHK3UyWzYDwsGmsOMt5OhtMV2cX1/mR9MYrDWbI5znMiCXLMNsTWpiHs/HXGHMpSjsMwUoA4zdk27NkYeXdJh2iOe/vkuwbRdM2COlp08uWarWKAZjP0w5+wnHMTW8Hdfof3WGfUTUHr+iAFTcfbmTNiPZ0LeJxjIYRrO59qYe/obx8z/vYD1vaV8x9jXbM399auxa82EI5j92A6eeGAAjL0A7beN3aq/NqSfs7qrg+p3gaH7F/Rd47ijGbB/li4eyD8EXBvscQ4/vMjzP2dZHDZ07wLaZk77wWxHqKY0yNVbBAN977MO4z7Trg2zc2bAKA5TcLbG7eKBwe4zx0kDFnjOAneNwWwNVL0XrioC7hcJDHKf6TCTc7YI1uDF2vpUrK1LgVy2STCwLWcm8JwFe5w6TMd5adcYjDqcAtvBzYgu3UxArw78L3GgheV0pCUgdImQMpPhKtgId8VWeA5sR9wHYQTKhW8hZEVU8duIKafzty8VnvfSTAe+ajTbGtC9dxuCVqlWnUJvrxeeg4QTsHssmm0NyIYuGe2ah507QTgWzbYGNPvlcESzVwZQMvvlcESzLQGj6F57ZPYHXmc083ua7VAIoddqKplKp3aEKTZrA/UmteRi/+FfQ7mpeGrda47NiKWiIiIiIv8FG3Tl5OYvmvIAAAAASUVORK5CYII=" InformativeScreenshot="d6528c857fa7a7490c6261f60c219c53.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='RPA 팀플 마케팅 - Excel' /&gt;" Title="RPA 팀플 마케팅 - Excel" />
+                                        </uix:NApplicationCard.TargetApp>
+                                      </uix:NApplicationCard>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ForEach>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="496,415.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="[&quot;Sub FillShapesWithImages()&quot; &amp; vbCrLf &amp; _&#xA;&quot;    Dim ws As Object&quot; &amp; vbCrLf &amp; _&#xA;&quot;    Dim shp As Object&quot; &amp; vbCrLf &amp; _&#xA;&quot;    Dim i As Integer&quot; &amp; vbCrLf &amp; _&#xA;&quot;    Dim imgPath As String&quot; &amp; vbCrLf &amp; _&#xA;&quot;    Set ws = ThisWorkbook.Sheets(1)&quot; &amp; vbCrLf &amp; _&#xA;&quot;    For i = 1 To 5&quot; &amp; vbCrLf &amp; _&#xA;&quot;        imgPath = &quot;&quot;C:\Users\SGB\Downloads\0615_charts\Chart &quot;&quot; &amp; i &amp; &quot;&quot;.png&quot;&quot;&quot; &amp; vbCrLf &amp; _&#xA;&quot;        On Error Resume Next&quot; &amp; vbCrLf &amp; _&#xA;&quot;        Set shp = ws.Shapes(&quot;&quot;Chart &quot;&quot; &amp; i)&quot; &amp; vbCrLf &amp; _&#xA;&quot;        If Not shp Is Nothing Then&quot; &amp; vbCrLf &amp; _&#xA;&quot;            shp.Fill.UserPicture imgPath&quot; &amp; vbCrLf &amp; _&#xA;&quot;        End If&quot; &amp; vbCrLf &amp; _&#xA;&quot;        On Error GoTo 0&quot; &amp; vbCrLf &amp; _&#xA;&quot;    Next i&quot; &amp; vbCrLf &amp; _&#xA;&quot;End Sub&quot;]" DisplayName="Invoke VBA" EntryMethodName="FillShapesWithImages" sap:VirtualizedContainerService.HintSize="433.6,326.4" sap2010:WorkflowViewState.IdRef="InvokeVBAX_3" Workbook="[Excel]">
+                          <ueab:InvokeVBAX.Body>
+                            <ActivityAction>
+                              <Sequence DisplayName="실행" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </ActivityAction>
+                          </ueab:InvokeVBAX.Body>
+                        </ueab:InvokeVBAX>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelApplicationCard.Body>
+          </ueab:ExcelApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

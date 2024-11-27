@@ -1,0 +1,658 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="네이버_카페_데이터_확보" sap:VirtualizedContainerService.HintSize="836,9816.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>BouncyCastle.Cryptography</AssemblyReference>
+      <AssemblyReference>BouncyCastle.Crypto</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="846.4,9752" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="cafemember" />
+      <Variable x:TypeArguments="x:String" Name="cafepost" />
+      <Variable x:TypeArguments="x:String" Name="cafevisitant" />
+      <Variable x:TypeArguments="x:Double" Name="newJvalue" />
+      <Variable x:TypeArguments="x:String" Name="todayDateString" />
+      <Variable x:TypeArguments="x:Int32" Name="firstIndex" />
+      <Variable x:TypeArguments="x:Int32" Name="lastindex" />
+      <Variable x:TypeArguments="x:Double" Name="lastJValue" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미]  네이버 카페" sap:VirtualizedContainerService.HintSize="784,3262.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="a0fb0f52-ebe0-4de2-86ee-f13d0a24817b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="750.4,3013.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="688,2923.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="카페 가입자수" sap:VirtualizedContainerService.HintSize="625.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="a0fb0f52-ebe0-4de2-86ee-f13d0a24817b" TextString="[cafemember]" Timeout="10" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/fitthesize#" ContentHash="htlwVwNSUUGeT1a8PGimig" DesignTimeRectangle="518, 889, 88, 26" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='197,453' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='EM' type='' class='' /&gt;" Guid="a89229cd-41f0-4110-96e9-1f03949635ad" InformativeScreenshot="d449073e372087dc2da4e35eb5806bc4.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/wATFw-GSokCuo8s4InKjdA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="484, 890, 27, 21" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='멤버수' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='멤버수' tag='IMG' type='' class='' /&gt;" Guid="d39bb925-0f7b-4543-ac7c-8f6bdac1a273" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="전체글 수 " sap:VirtualizedContainerService.HintSize="625.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="a0fb0f52-ebe0-4de2-86ee-f13d0a24817b" TextString="[cafepost]" Timeout="10" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/fitthesize#" ContentHash="WdzzG6-70Uit9757W1sK2Q" DesignTimeRectangle="685, 1165, 69, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='220,319' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='gm-tcol-c total' /&gt;" Guid="13311b8e-0f72-44c9-be00-8e0bfc11477e" InformativeScreenshot="30ba69cb4a06e81d29baa522cf03d07a.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/dxxp0dBGZEKuWabllE_mLQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="507, 1170, 97, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' type='' check:innerText='전체글보기' /&gt;" Guid="e5034b26-8626-4d51-8fce-8378b4a78ba0" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '카페소개'" sap:VirtualizedContainerService.HintSize="625.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a0fb0f52-ebe0-4de2-86ee-f13d0a24817b" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/fitthesize#" ContentHash="aHDsAsMNGUGu5AeFx9svrg" DesignTimeRectangle="583, 789, 72, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='카페소개' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='카페소개' tag='A' type='' class='u gm-tcol-c' check:innerText='카페소개' /&gt;" Guid="7be1a95e-9648-4d89-b245-74ef76151e43" InformativeScreenshot="b04ea369425abe917e20ac72e6db70f9.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/0RFRJnE4xk632zZacWCcnw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="469, 651, 150, 57" ElementType="Button" FullSelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' aaname='카페정보' check:innerText='카페정보' /&gt;" Guid="03d6ceec-5e3c-4fc3-b146-4bbfb9bdce02" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="625.6,139.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f572fd73-4270-469c-9cdd-02748574754c" InformativeScreenshot="00231154023c32b1b3ae9ce42d5b2562" Selector="&lt;webctrl src='/CafeProfileView.nhn?clubid=29942898' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='15' tag='SPAN' idx='3' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[cafevisitant]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[cafemember]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cafemember, "[^0-9]+", String.Empty)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[cafepost]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cafepost, "[^0-9]+", String.Empty)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,1835.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                <ueab:ExcelProcessScopeX.Body>
+                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,1724" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1635.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+                        <ueab:ExcelApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName=" 네이버 데이터" sap:VirtualizedContainerService.HintSize="496,1342.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[todayDateString]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd")]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="네이버팬카페" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[firstIndex]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,343.2" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_1" LastRowIndex="[lastindex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;핏더사이즈&quot;)]" VisibleRowsOnly="False" />
+                              <ui:ExcelWriteCell Cell="[&quot;I&quot;+(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="핏더사이즈" Text="[todayDateString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;J&quot;+ (lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="핏더사이즈" Text="[cafemember]" />
+                              <ui:ExcelReadCell Cell="[&quot;J&quot; + (lastindex).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="핏더사이즈">
+                                <ui:ExcelReadCell.Result>
+                                  <OutArgument x:TypeArguments="x:Double">[lastJValue]</OutArgument>
+                                </ui:ExcelReadCell.Result>
+                              </ui:ExcelReadCell>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Double">[newJValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Double">[CDbl(cafemember)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:ExcelWriteCell Cell="[&quot;K&quot; +(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="핏더사이즈" Text="[(newJValue - lastJValue).ToString()]" />
+                              <ui:ExcelWriteCell Cell="N15" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="인플루언서현황일일보고서" Text="[cafevisitant]" />
+                              <ui:ExcelWriteCell Cell="N16" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,111.2" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="인플루언서현황일일보고서" Text="[cafepost]" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelApplicationCard.Body>
+                      </ueab:ExcelApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelProcessScopeX.Body>
+              </ueab:ExcelProcessScopeX>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 2582, 1562" BrowserType="Chrome" ContentHash="O_RO2v7cpkuFRvSUWwMZhg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAjtJREFUWEftllFO20AQhi3HfecIPgJHyEsfmkCxQkC2SWFbUOqitKRN0ufcoLkBvUF6gzy0tSNeOEChC7SQYqfyEaazyyaskyWIsulDxSf9UrSe8T8ez65jPPA3vDpfd2qX5e5eXErrsQPvkqfQGC5D63dxrEZSaItwfQQDYr+88HrBhQu7g3Wo/SrD68sSsCLeJiuZIprxk7pI0wOhxH7x41m687MC1XMf5CLexCXswjI0pQ604seLIvX+EBrYm6fPKTnbAiwCtkUR2A3swCo0h0vXxlwFKlL1sEGrHyonO4BFADkjWMQmL4C1PWt8pfdpcUuk6sH9HlCfVoEVQU4Jb7vKmCspdESaHsrfgvza8S64xwGw99+Yarck3eaM1aOaUznZ5tOuNEU1h8VeI1nKixS9BNS1W8MCuUn1gWOL0P+A3BefmF/99jxkhJ5jRO7sbuUiH/6B9o1DZ0FYZlEEz0Vm5B8KyyyqYC3qe91c6H2U1/hrmUQO0CqcLXZ/s+/VR2tmqOhCJkmnRAFGjyzI63xNRr6oVaMCcBdI6ylfk8mFfioF6FPfX2GTb+HwjddC95OwvQYv0HGAToUbUw/26GBt+v8CDkZnMnAeslQ7gGFFbl6VoEP4cNgFr8c8hJ0aPCS0vgbr8y2Gk2juwr647d2wNMyCGXn01o/PLCaPzrvo3uYjcN+2VQazxD80OszH4H5l06syk8WmnBUssuYAPpXZ9/fwtOxeFYTC31bodfjWuukb/8BMDOMPCtFKyAXjpCQAAAAASUVORK5CYII=" InformativeScreenshot="b2a674d1abf643c1fb05ca4645bd3060.jpg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/1PA772NHYEagYWAtedNmxA" Selector="&lt;html app='chrome.exe' title='핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페' /&gt;" Title="핏더사이즈 FIT THE SIZE [패션,라이프스타일,일상,취미] : 네이버 카페" Url="https://cafe.naver.com/fitthesize#" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome KKST [한국 브랜드 커뮤니티]  네이버 카페" sap:VirtualizedContainerService.HintSize="784,3262.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="d59bd0ec-3849-4f5f-99c1-6343dd354689" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="750.4,3013.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="688,2923.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="카페 가입자수" sap:VirtualizedContainerService.HintSize="625.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="d59bd0ec-3849-4f5f-99c1-6343dd354689" TextString="[cafemember]" Timeout="10" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/kkangstylist" ContentHash="Ngt4FdSwykqtpwEitOF5sg" DesignTimeRectangle="1838, 648, 88, 26" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='118,781' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='EM' type='' class='' /&gt;" Guid="68645017-2c74-45b2-939d-f91d07fd7d4f" InformativeScreenshot="6536319dfdfb16bd7c23a066f9cde828.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/s83Dz7sGKECw_TJsZlnD0A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KKST [한국 브랜드 커뮤니티] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1804, 649, 27, 21" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='멤버수' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='멤버수' tag='IMG' type='' class='' /&gt;" Guid="45545367-732b-40e8-bb95-31a1825f189d" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="전체글 수 " sap:VirtualizedContainerService.HintSize="625.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="d59bd0ec-3849-4f5f-99c1-6343dd354689" TextString="[cafepost]" Timeout="10" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/kkangstylist" ContentHash="AypTbbrQnUaBnT8G3k-zeA" DesignTimeRectangle="2016, 928, 58, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='98,449' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='gm-tcol-c total' /&gt;" Guid="2a9d2c0c-ec74-4b27-89c9-1adb97214f0a" InformativeScreenshot="87b17ec7b85efb3bf9edcf9dfd57cfda.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/muCQMUF6oE-FQX29IPHLlQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KKST [한국 브랜드 커뮤니티] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1827, 933, 97, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' type='' check:innerText='전체글보기' /&gt;" Guid="a3c09a34-52f8-486d-908e-e5abdaa0d55a" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '카페소개'" sap:VirtualizedContainerService.HintSize="625.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d59bd0ec-3849-4f5f-99c1-6343dd354689" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/kkangstylist" ContentHash="x2SBBJ1yy0iTE5sq6prChw" DesignTimeRectangle="1903, 548, 72, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='카페소개' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='카페소개' tag='A' type='' class='u gm-tcol-c' check:innerText='카페소개' /&gt;" Guid="8512c78c-16a1-4a4a-ad14-5e7efc0eb57c" InformativeScreenshot="da03bc713b90bfb10b84f380137bf0ca.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/-HaBzVxEq0y83UEtfNOh4g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='KKST [한국 브랜드 커뮤니티] : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1789, 410, 150, 57" ElementType="Button" FullSelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' aaname='카페정보' check:innerText='카페정보' /&gt;" Guid="e9e05516-fa03-402a-82f9-55d7a7f2eefd" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="625.6,139.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f572fd73-4270-469c-9cdd-02748574754c" InformativeScreenshot="3cbf90d72a571f3182bdaca7213714b0" Selector="&lt;webctrl src='/CafeProfileView.nhn?clubid=29598309' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='17' tag='SPAN' idx='3' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[cafevisitant]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[cafemember]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cafemember, "[^0-9]+", String.Empty)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[cafepost]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cafepost, "[^0-9]+", String.Empty)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,1835.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                <ueab:ExcelProcessScopeX.Body>
+                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,1724" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1635.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+                        <ueab:ExcelApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName=" 네이버 데이터" sap:VirtualizedContainerService.HintSize="496,1342.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[todayDateString]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd")]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="네이버팬카페" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[firstIndex]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,343.2" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_2" LastRowIndex="[lastindex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;깡스타일리스트&quot;)]" VisibleRowsOnly="False" />
+                              <ui:ExcelWriteCell Cell="[&quot;I&quot;+(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_40" SheetName="깡스타일리스트" Text="[todayDateString]" />
+                              <ui:ExcelWriteCell Cell="[&quot;J&quot;+ (lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_41" SheetName="깡스타일리스트" Text="[cafemember]" />
+                              <ui:ExcelReadCell Cell="[&quot;J&quot; + (lastindex).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_5" SheetName="깡스타일리스트">
+                                <ui:ExcelReadCell.Result>
+                                  <OutArgument x:TypeArguments="x:Double">[lastJValue]</OutArgument>
+                                </ui:ExcelReadCell.Result>
+                              </ui:ExcelReadCell>
+                              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Double">[newJValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Double">[CDbl(cafemember)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:ExcelWriteCell Cell="[&quot;K&quot; +(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_42" SheetName="깡스타일리스트" Text="[(newJValue - lastJValue).ToString()]" />
+                              <ui:ExcelWriteCell Cell="N39" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="인플루언서현황일일보고서" Text="[cafevisitant]" />
+                              <ui:ExcelWriteCell Cell="N40" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,111.2" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_27" SheetName="인플루언서현황일일보고서" Text="[cafepost]" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelApplicationCard.Body>
+                      </ueab:ExcelApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelProcessScopeX.Body>
+              </ueab:ExcelProcessScopeX>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 2582, 1562" BrowserType="Chrome" ContentHash="DGXJ9Zu4e0mlJ7DZeAWydQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAjtJREFUWEftllFO20AQhi3HfecIPgJHyEsfmkCxQkC2SWFbUOqitKRN0ufcoLkBvUF6gzy0tSNeOEChC7SQYqfyEaazyyaskyWIsulDxSf9UrSe8T8ez65jPPA3vDpfd2qX5e5eXErrsQPvkqfQGC5D63dxrEZSaItwfQQDYr+88HrBhQu7g3Wo/SrD68sSsCLeJiuZIprxk7pI0wOhxH7x41m687MC1XMf5CLexCXswjI0pQ604seLIvX+EBrYm6fPKTnbAiwCtkUR2A3swCo0h0vXxlwFKlL1sEGrHyonO4BFADkjWMQmL4C1PWt8pfdpcUuk6sH9HlCfVoEVQU4Jb7vKmCspdESaHsrfgvza8S64xwGw99+Yarck3eaM1aOaUznZ5tOuNEU1h8VeI1nKixS9BNS1W8MCuUn1gWOL0P+A3BefmF/99jxkhJ5jRO7sbuUiH/6B9o1DZ0FYZlEEz0Vm5B8KyyyqYC3qe91c6H2U1/hrmUQO0CqcLXZ/s+/VR2tmqOhCJkmnRAFGjyzI63xNRr6oVaMCcBdI6ylfk8mFfioF6FPfX2GTb+HwjddC95OwvQYv0HGAToUbUw/26GBt+v8CDkZnMnAeslQ7gGFFbl6VoEP4cNgFr8c8hJ0aPCS0vgbr8y2Gk2juwr647d2wNMyCGXn01o/PLCaPzrvo3uYjcN+2VQazxD80OszH4H5l06syk8WmnBUssuYAPpXZ9/fwtOxeFYTC31bodfjWuukb/8BMDOMPCtFKyAXjpCQAAAAASUVORK5CYII=" InformativeScreenshot="8f7b18abc5738d05f9cb0a4a05a3f4a2.jpg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/hAwVWtyDgUKlBZ5jr9qRVg" Selector="&lt;html app='chrome.exe' title='KKST [한국 브랜드 커뮤니티] : 네이버 카페' /&gt;" Title="KKST [한국 브랜드 커뮤니티] : 네이버 카페" Url="https://cafe.naver.com/kkangstylist" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="짱구대디" sap:VirtualizedContainerService.HintSize="784,3138.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="8c8e7026-254d-4c56-8e64-d65e2e8bd501" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="688,2898.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="카페 가입자수" sap:VirtualizedContainerService.HintSize="625.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="8c8e7026-254d-4c56-8e64-d65e2e8bd501" TextString="[cafemember]" Timeout="10" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/zzang9daddy" ContentHash="MlZZKdsR5Ui2g7oo81EdZg" DesignTimeRectangle="518, 1099, 88, 26" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='376,822' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='EM' type='' class='' /&gt;" Guid="f3ef085c-b800-404a-92e7-5920676b79af" InformativeScreenshot="a6be93456df0ce4ada1a16bfd98677c9.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/4zKqNodXeUaDFxZ5RvsuYA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="484, 1100, 27, 21" ElementType="Icon" FullSelectorArgument="&lt;webctrl aaname='멤버수' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='멤버수' tag='IMG' type='' class='' /&gt;" Guid="d4184415-474b-45fb-9579-47afbee2103f" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="전체글 수 " sap:VirtualizedContainerService.HintSize="625.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="8c8e7026-254d-4c56-8e64-d65e2e8bd501" TextString="[cafepost]" Timeout="10" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/zzang9daddy" ContentHash="IEnJgJ0TN0eivg8HCjHcOQ" DesignTimeRectangle="685, 1297, 69, 36" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='482,669' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='gm-tcol-c total' /&gt;" Guid="fcc034f0-3bec-4848-8636-afbe481a2562" InformativeScreenshot="26953534982e3e85f6e7b3308caa0420.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/bjRFH4PGH0KNpe6RvXtz5Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="507, 1302, 97, 26" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='전체글보기' class='gm-tcol-c' tag='A' type='' check:innerText='전체글보기' /&gt;" Guid="f29923af-6bfc-4c68-aa1f-93a04aa17aa4" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '카페소개'" sap:VirtualizedContainerService.HintSize="625.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8c8e7026-254d-4c56-8e64-d65e2e8bd501" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://cafe.naver.com/zzang9daddy" ContentHash="88GMOnvWmEqDgvXX9UtVOg" DesignTimeRectangle="583, 921, 72, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='카페소개' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='카페소개' tag='A' type='' class='u gm-tcol-c' check:innerText='카페소개' /&gt;" Guid="367dde8b-b002-4629-a564-807f0f174bb8" InformativeScreenshot="a8d57fd87157e93cac54fbc74810cace.png" Reference="UMapJjqJ0E6jRh_vq7ZJJg/WcFtlyGickGEVZexjZsW6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="469, 783, 150, 57" ElementType="Button" FullSelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl class='gm-tcol-t' tag='BUTTON' type='button' aaname='카페정보' check:innerText='카페정보' /&gt;" Guid="646894eb-02c0-47e0-ab58-a14bfc188a23" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="625.6,139.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f572fd73-4270-469c-9cdd-02748574754c" InformativeScreenshot="98ce5a6ef68937ca39c238b19184ea22" Selector="&lt;webctrl src='/CafeProfileView.nhn?clubid=29328371' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='15' tag='SPAN' idx='3' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[cafevisitant]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <Assign sap:VirtualizedContainerService.HintSize="625.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[cafemember]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cafemember, "[^0-9]+", String.Empty)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="625.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[cafepost]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Replace(cafepost, "[^0-9]+", String.Empty)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,1835.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="592,1724" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+                      <Variable x:TypeArguments="x:Double" Name="lastJvalue" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1635.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="C:\Users\SGB\OneDrive\바탕 화면\인플루언서마케팅현황보고\RPA 인플루언서 현황 일일보고.xlsm">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName=" 네이버 데이터" sap:VirtualizedContainerService.HintSize="496,1342.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_17">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[todayDateString]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy-MM-dd")]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <ueab:FindFirstLastDataRowX BlankRowsToSkip="1" ColumnName="네이버팬카페" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowIndex="[firstIndex]" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,343.2" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_3" LastRowIndex="[lastindex]" LastRowOffset="0" Range="[Excel.Sheet(&quot;짱구대디&quot;)]" VisibleRowsOnly="False" />
+                            <ui:ExcelWriteCell Cell="[&quot;I&quot;+(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_43" SheetName="짱구대디" Text="[todayDateString]" />
+                            <ui:ExcelWriteCell Cell="[&quot;J&quot;+ (lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_44" SheetName="짱구대디" Text="[cafemember]" />
+                            <ui:ExcelReadCell Cell="[&quot;J&quot; + (lastindex).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="433.6,92" sap2010:WorkflowViewState.IdRef="ExcelReadCell_6" SheetName="짱구대디">
+                              <ui:ExcelReadCell.Result>
+                                <OutArgument x:TypeArguments="x:Double">[lastJValue]</OutArgument>
+                              </ui:ExcelReadCell.Result>
+                            </ui:ExcelReadCell>
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_20">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Double">[newJValue]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Double">[CDbl(cafemember)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:ExcelWriteCell Cell="[&quot;K&quot; +(lastindex+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_45" SheetName="짱구대디" Text="[(newJValue - lastJValue).ToString()]" />
+                            <ui:ExcelWriteCell Cell="N49" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_37" SheetName="인플루언서현황일일보고서" Text="[cafevisitant]" />
+                            <ui:ExcelWriteCell Cell="N50" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,111.2" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_38" SheetName="인플루언서현황일일보고서" Text="[cafepost]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="ZkF0jtVUnE-v16YWBsOTeg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAjtJREFUWEftllFO20AQhi3HfecIPgJHyEsfmkCxQkC2SWFbUOqitKRN0ufcoLkBvUF6gzy0tSNeOEChC7SQYqfyEaazyyaskyWIsulDxSf9UrSe8T8ez65jPPA3vDpfd2qX5e5eXErrsQPvkqfQGC5D63dxrEZSaItwfQQDYr+88HrBhQu7g3Wo/SrD68sSsCLeJiuZIprxk7pI0wOhxH7x41m687MC1XMf5CLexCXswjI0pQ604seLIvX+EBrYm6fPKTnbAiwCtkUR2A3swCo0h0vXxlwFKlL1sEGrHyonO4BFADkjWMQmL4C1PWt8pfdpcUuk6sH9HlCfVoEVQU4Jb7vKmCspdESaHsrfgvza8S64xwGw99+Yarck3eaM1aOaUznZ5tOuNEU1h8VeI1nKixS9BNS1W8MCuUn1gWOL0P+A3BefmF/99jxkhJ5jRO7sbuUiH/6B9o1DZ0FYZlEEz0Vm5B8KyyyqYC3qe91c6H2U1/hrmUQO0CqcLXZ/s+/VR2tmqOhCJkmnRAFGjyzI63xNRr6oVaMCcBdI6ylfk8mFfioF6FPfX2GTb+HwjddC95OwvQYv0HGAToUbUw/26GBt+v8CDkZnMnAeslQ7gGFFbl6VoEP4cNgFr8c8hJ0aPCS0vgbr8y2Gk2juwr647d2wNMyCGXn01o/PLCaPzrvo3uYjcN+2VQazxD80OszH4H5l06syk8WmnBUssuYAPpXZ9/fwtOxeFYTC31bodfjWuukb/8BMDOMPCtFKyAXjpCQAAAAASUVORK5CYII=" InformativeScreenshot="d7977895326796a51438a580671cfca3.jpg" Reference="UMapJjqJ0E6jRh_vq7ZJJg/y_Ghn2QqI0SqsuvwvOh0yg" Selector="&lt;html app='chrome.exe' title='짱구대디랑 - 패션 커뮤니티 : 네이버 카페' /&gt;" Title="짱구대디랑 - 패션 커뮤니티 : 네이버 카페" Url="https://cafe.naver.com/zzang9daddy" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
